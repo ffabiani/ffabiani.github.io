@@ -18,20 +18,20 @@ breadcrumbs: false
 author:
   name: "Filippo Fabiani"
   avatar: "/assets/images/profile.jpg"
-  bio: "Associate Professor\n IMT School for Advanced Studies Lucca, Lucca (IT)"
-  location: ""
+  bio: "Associate Professor > IMT School for Advanced Studies Lucca"
+  location: "Lucca (IT)"
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ffabiani"
     # To add a link, remove the # at the start of its three lines,
     # then replace the example address with your own.
-    # - label: "Email"
-    #   icon: "fas fa-fw fa-envelope"
-    #   url: "mailto:YOUR-EMAIL"
-    # - label: "Google Scholar"
-    #   icon: "fas fa-fw fa-graduation-cap"
-    #   url: "YOUR-GOOGLE-SCHOLAR-URL"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:filippo.fabiani@imtlucca.it"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=eXdKzcUAAAAJ&hl=en"
     # - label: "University profile"
     #   icon: "fas fa-fw fa-building-columns"
     #   url: "YOUR-UNIVERSITY-PROFILE-URL"
