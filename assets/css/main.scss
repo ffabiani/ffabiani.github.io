@@ -111,6 +111,12 @@
   }
 }
 
+/* Keep the sidebar at full opacity */
+.sidebar,
+.sidebar:hover {
+  opacity: 1;
+}
+
 .news-list li {
   margin-bottom: 0.8em;
 }
