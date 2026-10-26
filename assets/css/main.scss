@@ -5,7 +5,7 @@
 @import "minimal-mistakes";
 
 .page__content {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -65,4 +65,34 @@
 .sidebar .author__urls a {
   font-size: 16px;
   line-height: 1.5;
+}
+
+/* Profile photograph */
+.sidebar .author__avatar {
+  --portrait-size: 80px;
+  width: var(--portrait-size);
+  height: auto;
+}
+
+.sidebar .author__avatar img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 0;
+  padding: 0;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+}
+
+/* Larger photograph on desktop */
+@media (min-width: 64em) {
+  .sidebar .author__avatar {
+    --portrait-size: 180px;
+  }
+}
+
+.news-list li {
+  margin-bottom: 0.8em;
 }
