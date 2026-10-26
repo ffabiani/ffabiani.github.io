@@ -11,7 +11,5 @@ main:
     url: /teaching/
   # - title: "CV"
   #   url: /cv/
-
-<button id="theme-toggle" style="background: none; border: none; cursor: pointer; font-size: 1.1em; padding-left: 15px;">
-  <i id="theme-icon" class="fas fa-moon"></i>
-</button>
+  - title: "Vacancies"
+    url: /vacancies/
