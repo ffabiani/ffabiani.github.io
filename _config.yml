@@ -1,0 +1,74 @@
+# Personal details: edit the values in quotation marks.
+title: "Filippo Fabiani"
+name: "Filippo Fabiani"
+description: "Personal academic website of Filippo Fabiani."
+url: "https://ffabiani.github.io"
+baseurl: ""
+repository: "ffabiani/ffabiani.github.io"
+locale: "en-GB"
+timezone: "Europe/Rome"
+
+# Minimal Mistakes supplies the responsive layout, styles, and menus.
+# A fixed release keeps the appearance stable between content updates.
+remote_theme: "mmistakes/minimal-mistakes@4.28.1"
+minimal_mistakes_skin: "default"
+search: false
+breadcrumbs: false
+
+author:
+  name: "Filippo Fabiani"
+  avatar: "/assets/images/profile-placeholder.svg"
+  bio: "Personal academic website"
+  location: ""
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/ffabiani"
+    # To add a link, remove the # at the start of its three lines,
+    # then replace the example address with your own.
+    # - label: "Email"
+    #   icon: "fas fa-fw fa-envelope"
+    #   url: "mailto:YOUR-EMAIL"
+    # - label: "Google Scholar"
+    #   icon: "fas fa-fw fa-graduation-cap"
+    #   url: "YOUR-GOOGLE-SCHOLAR-URL"
+    # - label: "University profile"
+    #   icon: "fas fa-fw fa-building-columns"
+    #   url: "YOUR-UNIVERSITY-PROFILE-URL"
+
+# Leave empty until you upload the PDF. Example: "/assets/files/CV.pdf".
+cv_file: ""
+
+atom_feed:
+  hide: true
+
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
+  - jekyll-sitemap
+
+include:
+  - _pages
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
+      comments: false
+      share: false
+      related: false
+
+exclude:
+  - README.md
+  - SETUP.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - assets/files/README.md

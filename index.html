@@ -1,34 +1,23 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Filippo Fabiani</title>
-  <style>
-    body {
-      max-width: 760px;
-      margin: 70px auto;
-      padding: 0 24px;
-      font-family: system-ui, sans-serif;
-      line-height: 1.7;
-      color: #263238;
-      background: #fafafa;
-    }
-    h1, h2 { line-height: 1.2; }
-    a { color: #175caa; }
-  </style>
-</head>
-<body>
-  <h1>Filippo Fabiani</h1>
-  <p>Welcome to my personal website.</p>
+---
+layout: single
+title: "About me"
+permalink: /
+author_profile: true
+description: "Personal academic website of Filippo Fabiani."
+---
 
-  <h2>About</h2>
-  <p>Add a short biography here.</p>
+<!-- Replace the starter paragraphs below with your own biography. -->
+<p>Welcome to my personal website.</p>
+<p>Add a short biography here.</p>
 
-  <h2>Research</h2>
-  <p>Describe your research interests and current projects.</p>
+<h2>Research interests</h2>
+<p>Describe your research interests and current projects.</p>
+<p><a href="{{ '/research/' | relative_url }}">More about my research</a></p>
 
-  <h2>Publications</h2>
-  <p>Add your publications and links here.</p>
-</body>
-</html>
+<h2>Publications</h2>
+<p>Add your publications and links here.</p>
+<p><a href="{{ '/publications/' | relative_url }}">View publications</a></p>
+
+{% if site.cv_file and site.cv_file != "" %}
+<p><a href="{{ site.cv_file | relative_url }}">Download my curriculum vitae (PDF)</a></p>
+{% endif %}
