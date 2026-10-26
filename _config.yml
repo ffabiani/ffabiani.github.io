@@ -18,7 +18,7 @@ breadcrumbs: false
 author:
   name: "Filippo Fabiani"
   avatar: "/assets/images/profile.jpg"
-  bio: "Since May 2026, I am an Associate Professor in the DYSCO Research Unit at the IMT School for Advanced Studies Lucca, Lucca (IT). I received the B.Sc. degree in Bio-Engineering, the M.Sc. degree in Automatic Control Engineering, and the Ph.D. degree (cum laude) in Automatic Control, all from the University of Pisa (IT), in 2012, 2015, and 2019 respectively. In 2017-2018, I visited the Delft Center for Systems and Control at TU Delft (NL), where in 2018-2019 I spent one year as post-doctoral Research Fellow. Successively, in 2019-2022 I was Post-Doctoral Research Assistant in the Control Group at the Department of Engineering Science, University of Oxford (UK). \n My research to date has been at the intersection of machine learning, game theory and control engineering, and concentrates on developing both data-driven theoretical tools and algorithmic methods for modern control design. These include optimal control of multi-agent and uncertain systems such as power and traffic network, and emerging control applications in smart grids and smart cities."
+  bio: "Associate Professor\n IMT School for Advanced Studies Lucca, Lucca (IT)"
   location: ""
   links:
     - label: "GitHub"
