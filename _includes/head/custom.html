@@ -17,3 +17,9 @@
     }
   } catch (e) {}
 </script>
+
+{% if page.browser_title %}
+<script>
+  document.title = {{ page.browser_title | jsonify }};
+</script>
+{% endif %}

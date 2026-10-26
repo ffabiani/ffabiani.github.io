@@ -71,6 +71,18 @@
   line-height: 1.5;
 }
 
+/* Main subsection headings */
+.page__content h2 {
+  font-size: 16;
+  font-weight: 600;
+}
+
+/* Smaller headings within a subsection */
+.page__content h3 {
+  font-size: 16;
+  font-weight: 600;
+}
+
 /* Profile photograph */
 .sidebar .author__avatar {
   --portrait-size: 80px;

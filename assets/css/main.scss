@@ -58,6 +58,18 @@
   font-size: 16px;
 }
 
+/* Main subsection headings */
+.page__content h2 {
+  font-size: 16;
+  font-weight: 600;
+}
+
+/* Smaller headings within a subsection */
+.page__content h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
 /* Sidebar biography, affiliation, and profile links */
 .sidebar .author__bio,
 .sidebar .author__bio p,
