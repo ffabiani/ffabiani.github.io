@@ -21,12 +21,12 @@ author:
   bio: "Associate Professor<br>[IMT School for Advanced Studies Lucca](https://www.imtlucca.it/en/homepage)"
   location: "Lucca (IT)"
   links:
-    - label: "GitHub"
+    - label: "ffabiani"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ffabiani"
     # To add a link, remove the # at the start of its three lines,
     # then replace the example address with your own.
-    - label: "Email"
+    - label: "filippo.fabiani@imtlucca.it"
       icon: "fas fa-fw fa-envelope"
       url: "mailto:filippo.fabiani@imtlucca.it"
     - label: "Google Scholar"
