@@ -1,6 +1,7 @@
 ---
 title: "Publications"
 permalink: /publications/
+classes: wide
 ---
 
 Add your publications and links here.

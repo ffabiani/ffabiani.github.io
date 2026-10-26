@@ -1,6 +1,7 @@
 ---
 title: "Team"
 permalink: /team/
+classes: wide
 ---
 
 My current team information will be added here.

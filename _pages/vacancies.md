@@ -1,6 +1,7 @@
 ---
 title: "Vacancies"
 permalink: /vacancies/
+classes: wide
 ---
 
 I am continuously looking for motivated, talented, outstanding PhD students and PostDoc research fellows with strong Mathematical background in the areas of Systems and Control, Game Theory and Optimization.

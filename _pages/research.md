@@ -1,6 +1,7 @@
 ---
 title: "Research"
 permalink: /research/
+classes: wide
 ---
 
 Describe your research interests and current projects.

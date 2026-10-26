@@ -39,3 +39,34 @@
   outline-offset: 3px;
   border-radius: 4px;
 }
+
+/* Navigation links: Home, Publications, Vacancies, etc. */
+.greedy-nav .visible-links a,
+.greedy-nav .hidden-links a {
+  font-size: 16px;
+}
+
+/* Your name in the navigation bar */
+.greedy-nav .site-title {
+  font-size: 18px;
+}
+
+/* Page heading: "About me" */
+.page__title {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+/* Your name in the sidebar */
+.sidebar .author__name {
+  font-size: 18px;
+}
+
+/* Sidebar biography, affiliation, and profile links */
+.sidebar .author__bio,
+.sidebar .author__bio p,
+.sidebar .author__urls li,
+.sidebar .author__urls a {
+  font-size: 14px;
+  line-height: 1.5;
+}
