@@ -13,3 +13,5 @@ main:
   #   url: /cv/
   - title: "Vacancies"
     url: /vacancies/
+  - title: "☾"
+    url: "#theme-toggle"

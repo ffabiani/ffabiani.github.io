@@ -8,35 +8,55 @@
 <script>
 (() => {
   const sheet = document.getElementById("dark-theme");
-  const button = document.getElementById("theme-toggle");
+  const button = document.querySelector(
+    '.masthead a[href$="#theme-toggle"]'
+  );
 
-  if (!sheet) return;
+  if (!sheet || !button) return;
+
+  button.id = "theme-toggle";
+  button.setAttribute("role", "button");
 
   const isDark = () => window.matchMedia(sheet.media).matches;
 
-  function updateLabel() {
-    button.textContent = isDark()
+  function updateButton() {
+    const dark = isDark();
+
+    // Show the symbol for the mode clicking will activate.
+    button.textContent = dark ? "\u2600\uFE0E" : "\u263E";
+
+    const label = dark
       ? "Switch to light mode"
       : "Switch to dark mode";
 
-    button.disabled = false;
+    button.setAttribute("aria-label", label);
+    button.title = label;
   }
 
-  button.addEventListener("click", () => {
-    const dark = !isDark();
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
 
+    const dark = !isDark();
     sheet.media = dark ? "all" : "not all";
 
     try {
       localStorage.setItem("site-theme", dark ? "dark" : "light");
     } catch (e) {}
 
-    updateLabel();
+    updateButton();
+  });
+
+  // Support the Space key as well as Enter.
+  button.addEventListener("keydown", (event) => {
+    if (event.key === " ") {
+      event.preventDefault();
+      if (!event.repeat) button.click();
+    }
   });
 
   window.matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", updateLabel);
+    .addEventListener("change", updateButton);
 
-  updateLabel();
+  updateButton();
 })();
 </script>

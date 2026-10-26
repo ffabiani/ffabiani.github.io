@@ -12,7 +12,12 @@ classes: wide
 
 <p>My research lies at the intersection of machine learning, game theory and control engineering, and concentrates on developing both data-driven theoretical tools and algorithmic methods for modern control design. These include optimal control of multi-agent and uncertain systems such as power and traffic network, and emerging control applications in smart grids and smart cities.</p>
 
-<!-- <h2>Research interests</h2> -->
+{% if site.cv_file and site.cv_file != "" %}
+<p><a href="{{ site.cv_file | relative_url }}">Here</a> you can downloead my curriculum vitae.</p>
+{% endif %}
+
+
+<h2>News</h2>
 
 <!-- <p><a href="{{ '/research/' | relative_url }}">More about my research</a></p> -->
 
@@ -20,6 +25,4 @@ classes: wide
 <!-- <p>Add your publications and links here.</p> -->
 <!-- <p><a href="{{ '/publications/' | relative_url }}">View publications</a></p> -->
 
-{% if site.cv_file and site.cv_file != "" %}
-<p><a href="{{ site.cv_file | relative_url }}">Here</a> you can downloead my curriculum vitae.</p>
-{% endif %}
+
