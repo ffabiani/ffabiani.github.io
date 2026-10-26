@@ -1,3 +1,19 @@
 <link rel="icon"
       type="image/png"
       href="{{ '/assets/images/favicon.png' | relative_url }}">
+
+<link id="dark-theme"
+      rel="stylesheet"
+      href="{{ '/assets/css/dark.css' | relative_url }}"
+      media="(prefers-color-scheme: dark)">
+
+<script>
+  try {
+    const saved = localStorage.getItem("site-theme");
+
+    if (saved === "dark" || saved === "light") {
+      document.getElementById("dark-theme").media =
+        saved === "dark" ? "all" : "not all";
+    }
+  } catch (e) {}
+</script>

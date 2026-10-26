@@ -1,0 +1,42 @@
+<button id="theme-toggle"
+        type="button"
+        class="btn btn--primary"
+        disabled>
+  Switch theme
+</button>
+
+<script>
+(() => {
+  const sheet = document.getElementById("dark-theme");
+  const button = document.getElementById("theme-toggle");
+
+  if (!sheet) return;
+
+  const isDark = () => window.matchMedia(sheet.media).matches;
+
+  function updateLabel() {
+    button.textContent = isDark()
+      ? "Switch to light mode"
+      : "Switch to dark mode";
+
+    button.disabled = false;
+  }
+
+  button.addEventListener("click", () => {
+    const dark = !isDark();
+
+    sheet.media = dark ? "all" : "not all";
+
+    try {
+      localStorage.setItem("site-theme", dark ? "dark" : "light");
+    } catch (e) {}
+
+    updateLabel();
+  });
+
+  window.matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", updateLabel);
+
+  updateLabel();
+})();
+</script>
