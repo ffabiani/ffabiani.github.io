@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 360" role="img" aria-labelledby="research-uncertainty-title research-uncertainty-desc">
+  <title id="research-uncertainty-title">From finite data to a decision with a quantified guarantee</title>
+  <desc id="research-uncertainty-desc">Finite observations and modelling assumptions support an uncertainty description. This description informs a decision together with a bound and a confidence level. The dots are schematic observations, not experimental results.</desc>
+  <defs>
+    <marker id="uncertainty-arrow" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M1 1 L7 4 L1 7" fill="none" stroke="currentColor" stroke-width="1.5"/></marker>
+  </defs>
+  <g stroke="#ad7a3c" stroke-width="2" fill="#ad7a3c" fill-opacity="0.08">
+    <rect x="24" y="26" width="250" height="156" rx="14"/>
+    <rect x="406" y="26" width="250" height="156" rx="14"/>
+    <rect x="174" y="254" width="332" height="84" rx="14"/>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="2" opacity="0.65" marker-end="url(#uncertainty-arrow)">
+    <path d="M286 100 H393"/>
+    <path d="M532 194 V220 H340 V242"/>
+  </g>
+  <g fill="#ad7a3c">
+    <circle cx="91" cy="105" r="4"/><circle cx="117" cy="128" r="4"/>
+    <circle cx="135" cy="100" r="4"/><circle cx="158" cy="121" r="4"/>
+    <circle cx="179" cy="96" r="4"/><circle cx="201" cy="128" r="4"/>
+    <circle cx="83" cy="141" r="4"/><circle cx="150" cy="148" r="4"/>
+  </g>
+  <ellipse cx="531" cy="119" rx="90" ry="32" fill="#ad7a3c" fill-opacity="0.12" stroke="#ad7a3c" stroke-width="2" stroke-dasharray="5 4"/>
+  <g fill="currentColor" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">
+    <g font-size="25" font-weight="600">
+      <text x="149" y="65">Finite data</text>
+      <text x="531" y="65">Uncertainty</text>
+      <text x="340" y="288">Decision + guarantee</text>
+    </g>
+    <g font-size="19">
+      <text x="531" y="125">plausible models</text>
+      <text x="340" y="318">bound and confidence level</text>
+      <text x="340" y="83">assumptions</text>
+    </g>
+  </g>
+</svg>

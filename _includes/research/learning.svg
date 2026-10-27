@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 360" role="img" aria-labelledby="research-learning-title research-learning-desc">
+  <title id="research-learning-title">Learning within a control loop</title>
+  <desc id="research-learning-desc">Measurements inform learning of a model or policy. A controller uses that information to act on a physical system, whose outputs provide new measurements.</desc>
+  <defs>
+    <marker id="learning-arrow" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M1 1 L7 4 L1 7" fill="none" stroke="currentColor" stroke-width="1.5"/></marker>
+  </defs>
+  <g fill="none" stroke="currentColor" stroke-width="2" opacity="0.7" marker-end="url(#learning-arrow)">
+    <path d="M294 92 H382"/>
+    <path d="M524 144 V232"/>
+    <path d="M386 284 H298"/>
+    <path d="M156 236 V148"/>
+  </g>
+  <g stroke="#388e89" stroke-width="2">
+    <rect x="30" y="42" width="252" height="100" rx="14" fill="#388e89" fill-opacity="0.09"/>
+    <rect x="398" y="42" width="252" height="100" rx="14" fill="#388e89" fill-opacity="0.09"/>
+    <rect x="398" y="236" width="252" height="100" rx="14" fill="#388e89" fill-opacity="0.09"/>
+    <rect x="30" y="236" width="252" height="100" rx="14" fill="#388e89" fill-opacity="0.09"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">
+    <g font-size="25" font-weight="600">
+      <text x="156" y="87">Measurements</text>
+      <text x="524" y="87">Learning</text>
+      <text x="524" y="280">Controller</text>
+      <text x="156" y="280">Physical system</text>
+    </g>
+    <g font-size="19">
+      <text x="156" y="115">observed behaviour</text>
+      <text x="524" y="115">models and policies</text>
+      <text x="524" y="309">decisions in feedback</text>
+      <text x="156" y="309">dynamics and constraints</text>
+      <text x="340" y="77">data</text>
+      <text x="340" y="267">actions</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 360" role="img" aria-labelledby="research-games-title research-games-desc">
+  <title id="research-games-title">Interdependent decisions in a multi-agent system</title>
+  <desc id="research-games-desc">Three agents have individual objectives. Two-way connections illustrate interdependence and information exchange; shared constraints couple their feasible decisions.</desc>
+  <defs>
+    <marker id="games-arrow" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto-start-reverse"><path d="M1 1 L7 4 L1 7" fill="none" stroke="currentColor" stroke-width="1.5"/></marker>
+  </defs>
+  <g fill="none" stroke="currentColor" stroke-width="2" opacity="0.6" marker-start="url(#games-arrow)" marker-end="url(#games-arrow)">
+    <path d="M246 111 L148 235"/>
+    <path d="M434 111 L532 235"/>
+    <path d="M252 288 H428"/>
+  </g>
+  <g stroke="#6386b8" stroke-width="2" fill="#6386b8" fill-opacity="0.09">
+    <rect x="230" y="18" width="220" height="86" rx="14"/>
+    <rect x="22" y="246" width="220" height="86" rx="14"/>
+    <rect x="438" y="246" width="220" height="86" rx="14"/>
+    <ellipse cx="340" cy="188" rx="142" ry="43" stroke-dasharray="6 5"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">
+    <g font-size="25" font-weight="600">
+      <text x="340" y="54">Agent 1</text>
+      <text x="132" y="282">Agent 2</text>
+      <text x="548" y="282">Agent 3</text>
+    </g>
+    <g font-size="19">
+      <text x="340" y="82">individual objective</text>
+      <text x="132" y="310">individual objective</text>
+      <text x="548" y="310">individual objective</text>
+    </g>
+    <text x="340" y="184" font-size="23" font-weight="600">Shared constraints</text>
+    <text x="340" y="211" font-size="19">coupled decisions</text>
+  </g>
+</svg>
