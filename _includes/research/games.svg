@@ -1,32 +1,86 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 360" role="img" aria-labelledby="research-games-title research-games-desc">
-  <title id="research-games-title">Interdependent decisions in a multi-agent system</title>
-  <desc id="research-games-desc">Three agents have individual objectives. Two-way connections illustrate interdependence and information exchange; shared constraints couple their feasible decisions.</desc>
-  <defs>
-    <marker id="games-arrow" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto-start-reverse"><path d="M1 1 L7 4 L1 7" fill="none" stroke="currentColor" stroke-width="1.5"/></marker>
-  </defs>
-  <g fill="none" stroke="currentColor" stroke-width="2" opacity="0.6" marker-start="url(#games-arrow)" marker-end="url(#games-arrow)">
-    <path d="M246 111 L148 235"/>
-    <path d="M434 111 L532 235"/>
-    <path d="M252 288 H428"/>
-  </g>
-  <g stroke="#6386b8" stroke-width="2" fill="#6386b8" fill-opacity="0.09">
-    <rect x="230" y="18" width="220" height="86" rx="14"/>
-    <rect x="22" y="246" width="220" height="86" rx="14"/>
-    <rect x="438" y="246" width="220" height="86" rx="14"/>
-    <ellipse cx="340" cy="188" rx="142" ry="43" stroke-dasharray="6 5"/>
-  </g>
-  <g fill="currentColor" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">
-    <g font-size="25" font-weight="600">
-      <text x="340" y="54">Agent 1</text>
-      <text x="132" y="282">Agent 2</text>
-      <text x="548" y="282">Agent 3</text>
-    </g>
-    <g font-size="19">
-      <text x="340" y="82">individual objective</text>
-      <text x="132" y="310">individual objective</text>
-      <text x="548" y="310">individual objective</text>
-    </g>
-    <text x="340" y="184" font-size="23" font-weight="600">Shared constraints</text>
-    <text x="340" y="211" font-size="19">coupled decisions</text>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" role="img" aria-labelledby="research-games-title research-games-desc">
+<title id="research-games-title">Local interaction and the geometry of equilibrium seeking</title>
+<desc id="research-games-desc">A sparse communication network connects agents with individual objectives. A two-agent example shows a triangular joint feasible set, two best-response curves, an alternating-update path and their equilibrium intersection. The cost functions and geometry are illustrative rather than data from a publication.</desc>
+<defs>
+<marker id="games-ink-arrow" markerWidth="8" markerHeight="8" refX="6.8" refY="4" orient="auto-start-reverse"><path d="M1 1 L7 4 L1 7" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="games-teal-arrow" markerWidth="8" markerHeight="8" refX="6.8" refY="4" orient="auto-start-reverse"><path d="M1 1 L7 4 L1 7" fill="none" stroke="#278f8a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="games-blue-arrow" markerWidth="8" markerHeight="8" refX="6.8" refY="4" orient="auto-start-reverse"><path d="M1 1 L7 4 L1 7" fill="none" stroke="#5e87c5" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="games-amber-arrow" markerWidth="8" markerHeight="8" refX="6.8" refY="4" orient="auto-start-reverse"><path d="M1 1 L7 4 L1 7" fill="none" stroke="#c38a45" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="games-violet-arrow" markerWidth="8" markerHeight="8" refX="6.8" refY="4" orient="auto-start-reverse"><path d="M1 1 L7 4 L1 7" fill="none" stroke="#9b7cb8" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<g font-family="Arial, Helvetica, sans-serif" fill="currentColor">
+<text x="28.00" y="42.00" font-size="18" font-weight="600" text-anchor="start" fill="#278f8a" opacity="1">01</text>
+<text x="64.00" y="42.00" font-size="25" font-weight="600" text-anchor="start" fill="currentColor" opacity="1">Local information, coupled choices</text>
+<text x="550.00" y="42.00" font-size="18" font-weight="600" text-anchor="start" fill="#278f8a" opacity="1">02</text>
+<text x="586.00" y="42.00" font-size="25" font-weight="600" text-anchor="start" fill="currentColor" opacity="1">Geometry of equilibrium</text>
+<line x1="505.00" y1="64.00" x2="505.00" y2="505.00" stroke="currentColor" stroke-width="1.5" opacity="0.13"/>
+<path d="M55.00,202.00 L191.00,83.00 L414.00,116.00 L474.00,318.00 L348.00,453.00 L133.00,450.00 Z" fill="none" stroke="#5e87c5" stroke-width="1.7" opacity="0.55" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="246.00" y1="132.00" x2="91.00" y2="229.00" stroke="#5e87c5" stroke-width="2" opacity="0.55"/>
+<line x1="246.00" y1="132.00" x2="421.00" y2="209.00" stroke="#5e87c5" stroke-width="2" opacity="0.55"/>
+<line x1="91.00" y1="229.00" x2="178.00" y2="395.00" stroke="#5e87c5" stroke-width="2" opacity="0.55"/>
+<line x1="178.00" y1="395.00" x2="378.00" y2="379.00" stroke="#5e87c5" stroke-width="2" opacity="0.55"/>
+<line x1="378.00" y1="379.00" x2="421.00" y2="209.00" stroke="#5e87c5" stroke-width="2" opacity="0.55"/>
+<line x1="246.00" y1="132.00" x2="378.00" y2="379.00" stroke="#5e87c5" stroke-width="2" opacity="0.55"/>
+<circle cx="246.00" cy="132.00" r="31" fill="#278f8a" stroke="#278f8a" stroke-width="2" opacity="0.13"/>
+<circle cx="246.00" cy="132.00" r="28" fill="none" stroke="#278f8a" stroke-width="2" opacity="1"/>
+<text x="246.00" y="140.00" font-size="24" font-weight="600" text-anchor="middle" fill="currentColor" opacity="1">x₁</text>
+<ellipse cx="284" cy="91" rx="5" ry="2.9" stroke="#278f8a" fill="none" stroke-width="1" opacity="0.55"/>
+<ellipse cx="284" cy="91" rx="10" ry="5.8" stroke="#278f8a" fill="none" stroke-width="1" opacity="0.55"/>
+<ellipse cx="284" cy="91" rx="15" ry="8.7" stroke="#278f8a" fill="none" stroke-width="1" opacity="0.55"/>
+<circle cx="91.00" cy="229.00" r="31" fill="#5e87c5" stroke="#5e87c5" stroke-width="2" opacity="0.13"/>
+<circle cx="91.00" cy="229.00" r="28" fill="none" stroke="#5e87c5" stroke-width="2" opacity="1"/>
+<text x="91.00" y="237.00" font-size="24" font-weight="600" text-anchor="middle" fill="currentColor" opacity="1">x₂</text>
+<ellipse cx="129" cy="188" rx="5" ry="2.9" stroke="#5e87c5" fill="none" stroke-width="1" opacity="0.55"/>
+<ellipse cx="129" cy="188" rx="10" ry="5.8" stroke="#5e87c5" fill="none" stroke-width="1" opacity="0.55"/>
+<ellipse cx="129" cy="188" rx="15" ry="8.7" stroke="#5e87c5" fill="none" stroke-width="1" opacity="0.55"/>
+<circle cx="178.00" cy="395.00" r="31" fill="#c38a45" stroke="#c38a45" stroke-width="2" opacity="0.13"/>
+<circle cx="178.00" cy="395.00" r="28" fill="none" stroke="#c38a45" stroke-width="2" opacity="1"/>
+<text x="178.00" y="403.00" font-size="24" font-weight="600" text-anchor="middle" fill="currentColor" opacity="1">x₃</text>
+<ellipse cx="216" cy="354" rx="5" ry="2.9" stroke="#c38a45" fill="none" stroke-width="1" opacity="0.55"/>
+<ellipse cx="216" cy="354" rx="10" ry="5.8" stroke="#c38a45" fill="none" stroke-width="1" opacity="0.55"/>
+<ellipse cx="216" cy="354" rx="15" ry="8.7" stroke="#c38a45" fill="none" stroke-width="1" opacity="0.55"/>
+<circle cx="378.00" cy="379.00" r="31" fill="#9b7cb8" stroke="#9b7cb8" stroke-width="2" opacity="0.13"/>
+<circle cx="378.00" cy="379.00" r="28" fill="none" stroke="#9b7cb8" stroke-width="2" opacity="1"/>
+<text x="378.00" y="387.00" font-size="24" font-weight="600" text-anchor="middle" fill="currentColor" opacity="1">x₄</text>
+<ellipse cx="416" cy="338" rx="5" ry="2.9" stroke="#9b7cb8" fill="none" stroke-width="1" opacity="0.55"/>
+<ellipse cx="416" cy="338" rx="10" ry="5.8" stroke="#9b7cb8" fill="none" stroke-width="1" opacity="0.55"/>
+<ellipse cx="416" cy="338" rx="15" ry="8.7" stroke="#9b7cb8" fill="none" stroke-width="1" opacity="0.55"/>
+<circle cx="421.00" cy="209.00" r="31" fill="#5e87c5" stroke="#5e87c5" stroke-width="2" opacity="0.13"/>
+<circle cx="421.00" cy="209.00" r="28" fill="none" stroke="#5e87c5" stroke-width="2" opacity="1"/>
+<text x="421.00" y="217.00" font-size="24" font-weight="600" text-anchor="middle" fill="currentColor" opacity="1">x₅</text>
+<ellipse cx="459" cy="168" rx="5" ry="2.9" stroke="#5e87c5" fill="none" stroke-width="1" opacity="0.55"/>
+<ellipse cx="459" cy="168" rx="10" ry="5.8" stroke="#5e87c5" fill="none" stroke-width="1" opacity="0.55"/>
+<ellipse cx="459" cy="168" rx="15" ry="8.7" stroke="#5e87c5" fill="none" stroke-width="1" opacity="0.55"/>
+<text x="54.00" y="103.00" font-size="18" font-weight="400" text-anchor="start" fill="#5e87c5" opacity="1">neighbour exchanges</text>
+<text x="265.00" y="260.00" font-size="20" font-weight="600" text-anchor="middle" fill="currentColor" opacity="1">shared resources</text>
+<text x="265.00" y="290.00" font-size="25" font-weight="400" text-anchor="middle" fill="currentColor" opacity="1">Σ Aᵢxᵢ ≤ b</text>
+<text x="58.00" y="490.00" font-size="22" font-weight="400" text-anchor="start" fill="currentColor" opacity="1">individual objectives  Jᵢ(xᵢ, x₋ᵢ)</text>
+<line x1="667.00" y1="101.00" x2="667.00" y2="439.00" stroke="currentColor" stroke-width="1.5" opacity="0.09"/>
+<line x1="582.00" y1="185.50" x2="922.00" y2="185.50" stroke="currentColor" stroke-width="1.5" opacity="0.09"/>
+<line x1="752.00" y1="101.00" x2="752.00" y2="439.00" stroke="currentColor" stroke-width="1.5" opacity="0.09"/>
+<line x1="582.00" y1="270.00" x2="922.00" y2="270.00" stroke="currentColor" stroke-width="1.5" opacity="0.09"/>
+<line x1="837.00" y1="101.00" x2="837.00" y2="439.00" stroke="currentColor" stroke-width="1.5" opacity="0.09"/>
+<line x1="582.00" y1="354.50" x2="922.00" y2="354.50" stroke="currentColor" stroke-width="1.5" opacity="0.09"/>
+<line x1="582.00" y1="439.00" x2="929.00" y2="439.00" stroke="currentColor" stroke-width="1.5" opacity="0.55" marker-end="url(#games-ink-arrow)"/>
+<line x1="582.00" y1="439.00" x2="582.00" y2="94.00" stroke="currentColor" stroke-width="1.5" opacity="0.55" marker-end="url(#games-ink-arrow)"/>
+<text x="931.00" y="466.00" font-size="22" font-weight="400" text-anchor="end" fill="currentColor" opacity="1">x₁</text>
+<text x="570.00" y="87.00" font-size="22" font-weight="400" text-anchor="middle" fill="currentColor" opacity="1">x₂</text>
+<path d="M582.00,439.00 L922.00,439.00 L582.00,101.00 Z" fill="#278f8a" stroke="#278f8a" stroke-width="0" opacity="0.1" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="582.00" y1="101.00" x2="922.00" y2="439.00" stroke="currentColor" stroke-width="1.8" opacity="0.55" stroke-dasharray="6 5"/>
+<text x="783.00" y="122.00" font-size="20" font-weight="400" text-anchor="middle" fill="currentColor" opacity="1">x₁ + x₂ ≤ 1</text>
+<text x="595.60" y="423.79" font-size="18" font-weight="400" text-anchor="start" fill="#278f8a" opacity="1">joint feasible set</text>
+<path d="M656.80,439.00 L657.80,436.16 L658.80,433.32 L659.80,430.48 L660.80,427.64 L661.80,424.80 L662.80,421.96 L663.80,419.12 L664.80,416.28 L665.80,413.44 L666.80,410.60 L667.80,407.76 L668.80,404.92 L669.80,402.08 L670.80,399.24 L671.80,396.39 L672.80,393.55 L673.80,390.71 L674.80,387.87 L675.80,385.03 L676.80,382.19 L677.80,379.35 L678.80,376.51 L679.80,373.67 L680.80,370.83 L681.80,367.99 L682.80,365.15 L683.80,362.31 L684.80,359.47 L685.80,356.63 L686.80,353.79 L687.80,350.95 L688.80,348.11 L689.80,345.27 L690.80,342.43 L691.80,339.59 L692.80,336.75 L693.80,333.91 L694.80,331.07 L695.80,328.23 L696.80,325.39 L697.80,322.55 L698.80,319.71 L699.80,316.87 L700.80,314.03 L701.80,311.18 L702.80,308.34 L703.80,305.50 L704.80,302.66 L705.80,299.82 L706.80,296.98 L707.80,294.14 L708.80,291.30 L709.80,288.46 L710.80,285.62 L711.80,282.78 L712.80,279.94 L713.80,277.10 L714.80,274.26 L715.80,271.42 L716.80,268.58 L717.80,265.74 L718.80,262.90 L719.80,260.06 L720.80,257.22 L721.80,254.38 L722.80,251.54 L723.80,248.70 L724.80,245.86 L724.86,243.02 L722.00,240.18 L719.14,237.34 L716.29,234.50 L713.43,231.66 L710.57,228.82 L707.71,225.97 L704.86,223.13 L702.00,220.29 L699.14,217.45 L696.29,214.61 L693.43,211.77 L690.57,208.93 L687.71,206.09 L684.86,203.25 L682.00,200.41 L679.14,197.57 L676.29,194.73 L673.43,191.89 L670.57,189.05 L667.71,186.21 L664.86,183.37 L662.00,180.53 L659.14,177.69 L656.29,174.85 L653.43,172.01 L650.57,169.17 L647.71,166.33 L644.86,163.49 L642.00,160.65 L639.14,157.81 L636.29,154.97 L633.43,152.13 L630.57,149.29 L627.71,146.45 L624.86,143.61 L622.00,140.76 L619.14,137.92 L616.29,135.08 L613.43,132.24 L610.57,129.40 L607.71,126.56 L604.86,123.72 L602.00,120.88 L599.14,118.04 L596.29,115.20 L593.43,112.36 L590.57,109.52 L587.71,106.68 L584.86,103.84 L582.00,101.00" fill="none" stroke="#5e87c5" stroke-width="3" opacity="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M582.00,384.92 L584.86,384.21 L587.71,383.50 L590.57,382.79 L593.43,382.08 L596.29,381.37 L599.14,380.66 L602.00,379.95 L604.86,379.24 L607.71,378.53 L610.57,377.82 L613.43,377.11 L616.29,376.40 L619.14,375.69 L622.00,374.98 L624.86,374.27 L627.71,373.56 L630.57,372.85 L633.43,372.14 L636.29,371.43 L639.14,370.72 L642.00,370.01 L644.86,369.30 L647.71,368.59 L650.57,367.88 L653.43,367.17 L656.29,366.46 L659.14,365.75 L662.00,365.04 L664.86,364.33 L667.71,363.62 L670.57,362.91 L673.43,362.20 L676.29,361.49 L679.14,360.78 L682.00,360.07 L684.86,359.36 L687.71,358.65 L690.57,357.94 L693.43,357.23 L696.29,356.52 L699.14,355.81 L702.00,355.10 L704.86,354.39 L707.71,353.68 L710.57,352.97 L713.43,352.26 L716.29,351.55 L719.14,350.84 L722.00,350.13 L724.86,349.42 L727.71,348.71 L730.57,348.00 L733.43,347.29 L736.29,346.58 L739.14,345.87 L742.00,345.16 L744.86,344.45 L747.71,343.74 L750.57,343.03 L753.43,342.31 L756.29,341.60 L759.14,340.89 L762.00,340.18 L764.86,339.47 L767.71,338.76 L770.57,338.05 L773.43,337.34 L776.29,336.63 L779.14,335.92 L782.00,335.21 L784.86,334.50 L787.71,333.79 L790.57,333.08 L793.43,332.37 L796.29,331.66 L799.14,330.95 L802.00,330.24 L804.86,329.53 L807.71,328.82 L810.57,328.23 L813.43,331.07 L816.29,333.91 L819.14,336.75 L822.00,339.59 L824.86,342.43 L827.71,345.27 L830.57,348.11 L833.43,350.95 L836.29,353.79 L839.14,356.63 L842.00,359.47 L844.86,362.31 L847.71,365.15 L850.57,367.99 L853.43,370.83 L856.29,373.67 L859.14,376.51 L862.00,379.35 L864.86,382.19 L867.71,385.03 L870.57,387.87 L873.43,390.71 L876.29,393.55 L879.14,396.39 L882.00,399.24 L884.86,402.08 L887.71,404.92 L890.57,407.76 L893.43,410.60 L896.29,413.44 L899.14,416.28 L902.00,419.12 L904.86,421.96 L907.71,424.80 L910.57,427.64 L913.43,430.48 L916.29,433.32 L919.14,436.16 L922.00,439.00" fill="none" stroke="#c38a45" stroke-width="3" opacity="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="707.80" y="286.90" font-size="20" font-weight="600" text-anchor="start" fill="#5e87c5" opacity="1">BR₁</text>
+<text x="775.80" y="354.50" font-size="20" font-weight="600" text-anchor="start" fill="#c38a45" opacity="1">BR₂</text>
+<path d="M840.40,405.20 L668.70,405.20 L668.70,363.37 L683.43,363.37 L683.43,359.71 L684.71,359.71 L684.71,359.39 L684.83,359.39 L684.83,359.36 L684.84,359.36 L684.84,359.36 L684.84,359.36 L684.84,359.36 L684.84,359.36 L684.84,359.36" fill="none" stroke="currentColor" stroke-width="2" opacity="0.85" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="840.40" cy="405.20" r="5" fill="none" stroke="currentColor" stroke-width="2" opacity="1"/>
+<path d="M684.84,347.36 L687.94,355.09 L696.25,355.65 L689.86,360.99 L691.89,369.07 L684.84,364.64 L677.78,369.07 L679.82,360.99 L673.43,355.65 L681.73,355.09 Z" fill="#278f8a" stroke="#278f8a" stroke-width="1" opacity="1" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="684.84" y1="359.36" x2="636.40" y2="300.42" stroke="#278f8a" stroke-width="1.5" opacity="0.7"/>
+<text x="593.90" y="280.14" font-size="19" font-weight="600" text-anchor="start" fill="#278f8a" opacity="1">equilibrium</text>
+<text x="585.00" y="492.00" font-size="19" font-weight="400" text-anchor="start" fill="currentColor" opacity="1">alternating best-response updates</text>
+<line x1="28.00" y1="528.00" x2="972.00" y2="528.00" stroke="currentColor" stroke-width="1.5" opacity="0.18"/>
+<text x="32.00" y="567.00" font-size="22" font-weight="600" text-anchor="start" fill="currentColor" opacity="1">Local optimization</text>
+<text x="353.00" y="567.00" font-size="22" font-weight="600" text-anchor="start" fill="currentColor" opacity="1">Shared feasibility</text>
+<text x="712.00" y="567.00" font-size="22" font-weight="600" text-anchor="start" fill="currentColor" opacity="1">Equilibrium seeking</text>
+</g></svg>
