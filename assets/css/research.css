@@ -1,0 +1,17 @@
+/* Keep the research page consistent with the site's fonts and light/dark theme. */
+.research-page .page {
+  float: none;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+.research-page .page__title,
+.research-page .page__content h2 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.research-page .page__content h2 {
+  margin-top: 1.7em;
+  margin-bottom: 0.6em;
+}

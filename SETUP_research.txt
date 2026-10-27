@@ -1,0 +1,67 @@
+Website update: Research and Publications
+
+Copy these four files to the same paths in your GitHub repository:
+
+  _pages/research.md
+  _pages/publications.md
+  assets/css/research.css
+  assets/css/publications.css
+
+Replace the existing page files rather than creating a second page at the same URL.
+Upload the contents of this ZIP to the repository root, preserving the _pages and
+assets folders. Do not upload the outer website-update folder as a subfolder.
+Commit, then wait for the GitHub Pages deployment to finish successfully.
+The existing Research and Publications navigation links already target these pages.
+
+RESEARCH
+
+The page contains an introductory paragraph and three research directions:
+  - Learning-based control and system identification
+  - Game theory and distributed decision-making
+  - Probabilistic guarantees and optimization under uncertainty
+
+The descriptions are based on the interests and publications in CV_FF(5).pdf,
+uploaded on 27 October 2026. They are written in the first person for your website.
+They do not claim project outcomes, deployments or research activities absent from
+the CV. Headings inherit your theme's colours and use the same 18px size as the
+page title. The page has no author sidebar.
+
+PUBLICATIONS
+
+The new CV is the source for all 62 entries:
+  - 6 preprints: [P6] down to [P1]
+  - 31 journal papers: [J31] down to [J1]
+  - 25 conference papers: [C25] down to [C1]
+
+The selection, category order, paper order and numbering follow the new CV.
+The list is newest-first as arranged in that document. Every entry shows all its
+authors, with F. Fabiani in bold. There are no year headings. Years and other
+bibliographic details remain within each citation where supplied by the CV.
+Three arXiv links explicitly present in the CV are included as title links.
+
+The entries are ordinary HTML inside _pages/publications.md, so the page no longer
+depends on CSV parsing, classification rules, or the previous Liquid row-index
+lookup. Existing _data/publications.csv and _data/publication_rules.yml files can
+remain in your repository; this replacement page does not read them.
+
+This is an extraction of the uploaded CV, not a live PDF-reading feature. Replacing
+the CV PDF alone does not update the website: edit the entries in the page, or
+regenerate the page from your next CV. If adding a new paper at the top, give it
+the next number, update the category count and the ordered-list start attribute.
+
+SOURCE DETAILS
+
+The bibliography was taken only from pages 8-12 of CV_FF(5).pdf. Line wrapping,
+author separators and quotation punctuation were normalized for the webpage.
+No extra papers, dates, DOI links or publication-status changes were inferred.
+In particular, P1 and C3 have no explicit year in their CV citations, and J24 lists
+S. Yuan twice; those details were preserved. Names remain abbreviated as in the CV.
+The CV PDF itself and its personal contact details are not included in this ZIP.
+
+VALIDATION
+
+The generated HTML is checked for all 62 records, exact descending category labels,
+complete author lists, one bold F. Fabiani per record, valid category anchors and
+preserved citation text. The research page has exactly three research sections.
+The full Minimal Mistakes/Jekyll build still needs the GitHub Pages deployment;
+Ruby/Jekyll and a browser are not available in the editing environment.
