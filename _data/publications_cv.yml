@@ -4,10 +4,12 @@
 preprints:
 - authors: A. Martin, F. Fabiani, and G. Belgioioso
   title: Finite-sample guarantees for data-driven operator splitting methods via martingale inequalities
-  venue: submitted to Automatica, 2026.
+  venue: submitted to Automatica, 2026. (Available at arxiv.org/abs/2609.16353)
+  url: https://arxiv.org/abs/2609.16353
 - authors: F. Fabiani
   title: Generalization as a robust performance property of learning-enabled dynamical systems
-  venue: submitted to the IEEE Transactions on Automatic Control, 2026.
+  venue: submitted to the IEEE Transactions on Automatic Control, 2026. (Available at arxiv.org/abs/2608.30431)
+  url: https://arxiv.org/abs/2608.30431
 - authors: F. Gao, Z. Feng, Z. Zhang, F. Fabiani, and S. Yuan
   title: 'Distributed task allocation for multi-robot lunar construction: A generalized mixed-integer potential game approach'
   venue: submitted to the IEEE Transactions on Aerospace and Electronic Systems, 2026.
@@ -19,7 +21,7 @@ preprints:
   venue: submitted to the IEEE Transactions on Cybernetics, 2026.
 - authors: F. Fabiani, and S. Sagratella
   title: Best-response algorithms for a class of monotone Nash equilibrium problems with mixed-integer variables
-  venue: submitted to Mathematics of Operations Research (Available at arxiv.org/abs/2310.09885)
+  venue: submitted to Mathematics of Operations Research. (Available at arxiv.org/abs/2310.09885)
   url: https://arxiv.org/abs/2310.09885
 journal:
 - authors: F. Fabiani and B. Franci
@@ -51,7 +53,7 @@ journal:
   venue: IEEE Control Systems Letters, vol. 9, pp. 312–317, 2025.
 - authors: S. Yuan, Y. Wang, Z. Zhang and F. Fabiani
   title: 'Fast and safe spacecraft proximity and rendezvous: A hierarchical approach'
-  venue: submitted to the IEEE Transactions on Aerospace and Electronic Systems, vol. 61, no. 2, pp. 5166–5177, 2025.
+  venue: IEEE Transactions on Aerospace and Electronic Systems, vol. 61, no. 2, pp. 5166–5177, 2025.
 - authors: F. Fabiani, B. Stellato, D. Masti, and P. J. Goulart
   title: A neural network-based approach to hybrid systems identification for control
   venue: Automatica, vol. 174, pp. 112130, 2025.
@@ -119,12 +121,6 @@ conference:
 - authors: E. Dimou, F. Fabiani, and A. Bemporad
   title: Receding horizon games with stability guarantees
   venue: Decision and Control (CDC), 2026 IEEE 65th Annual Conference on, IEEE. (To appear)
-- authors: B. Franci, F. Fabiani, and L. Zino
-  title: On the role of stubborness in Nash equilibrium problems
-  venue: Decision and Control (CDC), 2026 IEEE 65th Annual Conference on, IEEE.
-- authors: B. Franci, F. Fabiani, and A. Bemporad
-  title: Actively learning equilibria in Nash games with misleading information
-  venue: Decision and Control (CDC), 2025 IEEE 64th Annual Conference on, IEEE.
 - authors: B. Franci, F. Fabiani, M. Schmidt and M. Staudigl
   title: A Gauss-Seidel method for solving multi-leader-multi-follower games
   venue: in 2025 European Control Conference (ECC). IEEE, 2025, pp. 2775–2780.
@@ -143,9 +139,6 @@ conference:
 - authors: B. Franci and F. Fabiani
   title: Sharing beliefs to learn Nash equilibria
   venue: in 2024 European Control Conference (ECC). IEEE, 2024, pp. 317–322.
-- authors: D. Masti, F. Fabiani, G. Gnecco and A. Bemporad
-  title: Counter-example guided inductive synthesis of control Lyapunov functions for uncertain systems
-  venue: Decision and Control (CDC), 2023 IEEE 62nd Annual Conference on, IEEE.
 - authors: M. Fochesato, F. Fabiani and J. Lygeros
   title: 'Generalized uncertain Nash games: Reformulation and robust equilibrium seeking'
   venue: in 2023 European Control Conference (ECC). IEEE, 2023, pp. 1–6.
@@ -155,18 +148,12 @@ conference:
 - authors: F. Fabiani and B. Franci
   title: A stochastic generalized Nash equilibrium model for platforms competition in the ride-hail market
   venue: Decision and Control (CDC), 2022 IEEE 61st Annual Conference on, pp. 4455–4460, IEEE.
-- authors: G. Pantazis, F. Fabiani, F. Fele and K. Margellos
-  title: Probabilistically robust stabilizing allocations in uncertain cooperative games
-  venue: Decision and Control (CDC), 2022 IEEE 61st Annual Conference on, IEEE.
 - authors: F. Fabiani, A. Simonetto and P. J. Goulart
   title: Learning equilibria with personalized incentives in a class of nonmonotone games
   venue: in 2022 European Control Conference (ECC). IEEE, 2022, pp. 2179–2184.
 - authors: F. Fabiani
   title: Pursuing robust decisions in uncertain traffic equilibrium problems
   venue: Decision and Control (CDC), 2021 IEEE 60th Annual Conference on, pp. 5116-5121, IEEE.
-- authors: F. Fabiani, K. Margellos and P. J. Goulart
-  title: Probabilistic stabilizability certificates for a class of black-box linear systems
-  venue: Decision and Control (CDC), 2021 IEEE 60th Annual Conference on, IEEE.
 - authors: F. Fabiani and P. J. Goulart
   title: The optimal transport paradigm enables data compression in data-driven robust control
   venue: 2021 American Control Conference (ACC), IEEE 2021, pp. 2412-2417, IEEE.
@@ -175,7 +162,7 @@ conference:
   venue: Decision and Control (CDC), 2020 IEEE 59th Annual Conference on, pp. 3725–3730, IEEE.
 - authors: F. Fabiani and S. Grammatico
   title: A forward-backward algorithm for decomposable semi-definite programs
-  venue: Proceedings of the 28th IEEE Mediterranean Control Conference, Saint-Raphaël, France. IEEE, 2020. pp. 580-585.
+  venue: Proceedings of the 28th IEEE Mediterranean Control Conference, Saint-Raphaël, France. IEEE, 2020. pp. 580-585.
 - authors: C. Cenedese, F. Fabiani, M. Cucuzzella, J. M. A. Scherpen, M. Cao and S. Grammatico
   title: Charging plug-in electric vehicles as a mixed-integer aggregative game
   venue: Decision and Control (CDC), 2019 IEEE 58th Annual Conference on, pp. 4904–4909, IEEE.
@@ -191,9 +178,6 @@ conference:
 - authors: F. Fabiani and S. Grammatico
   title: A Mixed-Logical-Dynamical model for Automated Driving on highways
   venue: Decision and Control (CDC), 2018 IEEE 57th Annual Conference on, pp. 1011–1015, IEEE.
-- authors: G. Belgioioso, F. Fabiani, F. Blanchini and S. Grammatico
-  title: 'On the convergence of discrete-time linear systems: a linear time-varying Mann iteration converges iff its operator is strictly pseudocontractive'
-  venue: Decision and Control (CDC), 2018 IEEE 57th Annual Conference on.
 - authors: G.M. Gasparri, F. Fabiani, M. Garabini, L. Pallottino, M. Catalano, G. Grioli, R. Persichini and A. Bicchi
   title: Robust optimization of system compliance for physical interaction in uncertain scenarios
   venue: In Humanoid Robots (Humanoids), 2016 IEEE-RAS 16th International Conference on, pp. 911–918, IEEE.

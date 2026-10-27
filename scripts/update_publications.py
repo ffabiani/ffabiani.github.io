@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Rebuild _data/publications_cv.yml from the publication lists in the CV PDF.
 
-Usage (from the repository root, needs `pdftotext` from poppler and PyYAML):
+Usage (from the repository root):
 
+    python3 -m pip install pyyaml pymupdf
     python3 scripts/update_publications.py
 
 The CV is the single source of truth. The script reads the "Preprints",
@@ -11,31 +12,37 @@ assets/files/CV_FF.pdf, keeps the wording and the numbering of the CV, and
 writes the YAML file that _pages/publications.md renders.
 """
 import re
-import subprocess
 import sys
+import unicodedata
 from pathlib import Path
 
 import yaml
+
+try:
+    import pymupdf
+except ImportError:  # older PyMuPDF versions
+    import fitz as pymupdf
 
 ROOT = Path(__file__).resolve().parent.parent
 CV_PDF = ROOT / "assets" / "files" / "CV_FF.pdf"
 OUT = ROOT / "_data" / "publications_cv.yml"
 
 SECTIONS = {"Preprints": "preprints", "Journal": "journal", "Conference": "conference"}
-LABEL = re.compile(r"^(Preprints|Journal|Conference)\s{3,}")
-LABEL2 = re.compile(r"^Publications\s{3,}")
+LABEL = re.compile(r"^(Preprints|Journal|Conference)$")
 FOOTER = re.compile(r"^\d+ of \d+$")
-ENTRY = re.compile(r"^(\d+)\.\s+(.*)$")
+ENTRY = re.compile(r"^(\d+)\.(?:\s+(.*))?$")
 SPLIT = re.compile(r"^(.*?),\s+[“”\"](.+?)[”\"]\s*(.*)$", re.S)
 ARXIV = re.compile(r"arxiv\.org/abs/([\w.\-/]+)", re.I)
 
 
 def read_lines():
-    text = subprocess.run(
-        ["pdftotext", "-layout", str(CV_PDF), "-"],
-        check=True, capture_output=True, text=True,
-    ).stdout
-    return text.replace("\f", "\n").splitlines()
+    doc = pymupdf.open(str(CV_PDF))
+    text = "\n".join(page.get_text("text") for page in doc)
+    text = unicodedata.normalize("NFKC", text)  # e.g. the "fi" ligature
+    # accents can be extracted as a separate mark before the letter ("Rapha ̈el"): re-attach
+    text = re.sub(r"\s?([\u0300-\u036f])(\w)", r"\2\1", text)
+    text = unicodedata.normalize("NFC", text)
+    return [ln.strip() for ln in text.splitlines()]
 
 
 def join(parts):
@@ -51,24 +58,24 @@ def join(parts):
 
 
 def parse():
-    section, started = None, False
+    lines = read_lines()
+    section = None
     raw = {k: [] for k in SECTIONS.values()}
-    for line in read_lines():
-        m = LABEL.match(line.strip("\n"))
-        if m and ENTRY.match(LABEL.sub("", line).strip()):
-            section, started = SECTIONS[m.group(1)], True
-        if not started:
-            continue
-        s = LABEL.sub("", line)
-        s = LABEL2.sub("", s).strip()
-        if not s or FOOTER.match(s):
-            continue
-        if re.match(r"^(Preprints|Journal|Conference)$", s) or s == "Publications":
+    for i, s in enumerate(lines):
+        if LABEL.match(s):
+            # a section label is followed (optionally after "Publications") by entry 'N.'
+            rest = [x for x in lines[i + 1:i + 4] if x and x != "Publications"]
+            if rest and ENTRY.match(rest[0]):
+                section = SECTIONS[s]
+                continue
+        if section is None or not s or s == "Publications" or FOOTER.match(s):
             continue
         m = ENTRY.match(s)
-        if m:
-            raw[section].append([int(m.group(1)), [m.group(2)]])
-        else:
+        # A line starting "N." is a new entry only if N is the next number of the
+        # countdown (a wrapped year such as "2026." must not be taken for an entry).
+        if m and (not raw[section] or int(m.group(1)) == raw[section][-1][0] - 1):
+            raw[section].append([int(m.group(1)), [m.group(2) or ""]])
+        elif raw[section]:
             raw[section][-1][1].append(s)
 
     result = {}
@@ -78,7 +85,7 @@ def parse():
             sys.exit(f"{key}: numbering in the CV is not consecutive: {nums}")
         entries = []
         for n, parts in items:
-            full = join(parts)
+            full = join([p for p in parts if p])
             m = SPLIT.match(full)
             if not m:
                 sys.exit(f"Could not parse {key} #{n}: {full}")
