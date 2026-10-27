@@ -1,0 +1,49 @@
+/* This page inherits the site's current light/dark colours and fonts. */
+.publications-page .page {
+  float: none;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+.publication-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 1.25em;
+  margin-bottom: 1.5em;
+}
+.publication-section {
+  margin-bottom: 2em;
+}
+.publication-section h2 {
+  scroll-margin-top: 1em;
+}
+.publication-count {
+  font-weight: 400;
+}
+.page__content .publication-year {
+  margin-top: 1.25em;
+  margin-bottom: 0.75em;
+  font-size: 16px;
+}
+.page__content .publication-list {
+  margin: 0;
+  padding-left: 1.5em;
+}
+.publication-item {
+  margin-bottom: 1.25em;
+  padding-left: 0.25em;
+  overflow-wrap: anywhere;
+  text-align: left;
+}
+.publication-title {
+  font-weight: 600;
+}
+.publication-authors,
+.publication-venue,
+.publication-note,
+.publication-links {
+  margin-top: 0.2em;
+}
+.publication-note {
+  font-style: italic;
+}

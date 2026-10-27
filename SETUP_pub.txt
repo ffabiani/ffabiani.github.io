@@ -1,0 +1,56 @@
+# Add the grouped Publications page
+
+Copy the four website files into the same paths in your GitHub repository:
+
+- `_data/publications.csv` — your original Google Scholar export, unchanged.
+- `_data/publication_rules.yml` — venue rules and documented exceptions.
+- `_pages/publications.md` — replaces the current Publications page.
+- `assets/css/publications.css` — styles for this page only.
+
+Upload the contents into the repository root, preserving these folders; do not put the whole `publications-update` folder inside the repository. Commit the changes and wait for GitHub Pages to finish building. Your existing Publications menu link already points to `/publications/`.
+
+The page has no author sidebar, uses the available content width, and inherits your light/dark theme. No change to `_config.yml`, `main.scss`, or `dark.scss` is needed. No additional plugin or GitHub Actions workflow is required.
+
+## Current classification
+
+- Preprints: 4 entries, including one explicitly labelled extended arXiv version of a published journal paper.
+- Journal papers: 31 entries.
+- Conference papers: 28 entries, including one explicitly labelled conference abstract.
+- Other works: your 2019 PhD thesis.
+
+All 64 CSV records appear once. Each section is grouped by year, newest first; within each year, titles are alphabetical. The totals count records, not necessarily distinct underlying research contributions. The extended arXiv version and its journal paper remain separate because the supplied CSV contains both.
+
+## Updating your publications
+
+Replace `_data/publications.csv` with a fresh Scholar CSV export using the same column headings. Commit it and GitHub Pages rebuilds the list. Existing known journals, conference markers and arXiv labels are classified automatically.
+
+If a journal is new to the list, add its venue name in lowercase under `journal_venues` in `_data/publication_rules.yml`. Unrecognised venues appear under Other works so new records are visible rather than silently omitted. A missing year is shown as Year not specified. Review Other works after importing a new export.
+
+For an exception, add an entry under `overrides`, using the exact CSV Title as the key. Supported display fields are `category`, `venue`, `year`, `url`, and `note`. Categories are `preprint`, `journal`, `conference`, and `other`. Quote the year. The optional `source` and `source_note` fields document the reason and are not displayed on the public page.
+
+Example:
+
+```yaml
+  Exact title as it appears in the CSV:
+    category: journal
+    venue: Journal name
+    year: "2027"
+    url: https://doi.org/REPLACE_WITH_THE_REAL_DOI
+```
+
+If a title changes in a later export, update its override key too. When a preprint is published, update its Scholar record or add an override with the published venue/year. The website does not query Scholar or publishers to discover status changes. If the export contains both versions, it preserves both until you remove or merge them in the source export.
+
+## Classification decisions and sources
+
+1. IFAC-PapersOnLine is treated as conference proceedings, not a journal publication. IFAC identifies the series as proceedings: https://ifac-control.org/publications/what-is-ifac-papersonline/
+2. Receding horizon games with stability guarantees is assigned to CDC 2026, filling its blank venue and year for display. It appears in co-author Alberto Bemporad's institutional publication list: https://cse.lab.imtlucca.it/~bemporad/publications/
+3. The optimal transport paradigm enables data compression in data-driven robust control is assigned to ACC 2021 rather than left as an unpublished preprint. The published record is https://ieeexplore.ieee.org/document/9483139/ and the co-author's institutional listing confirms ACC 2021: https://users.ox.ac.uk/~engs1373/kw_optimization.html . Its arXiv link is retained. Conflicting page-number metadata was not added.
+4. Potential game-theoretic control of complex multi-agent systems is a PhD thesis, kept under Other works: https://etd.adm.unipi.it/t/etd-04302019-134743/
+5. Charging Plug-in Electric Vehicles: A Game Theoretic Approach is labelled Conference abstract, following the institutional record: https://research.rug.nl/en/publications/charging-plug-in-electric-vehicles-a-game-theoretic-approach/
+6. Identification of non-causal systems with random switching modes (extended version) remains in Preprints with an explicit note identifying it as the extended arXiv version of the Automatica paper also in the export: https://arxiv.org/abs/2503.13973
+
+The remaining venue/year/volume/page data is displayed as supplied by Google Scholar. This is not a full bibliographic metadata audit: early-online years and final issue years can differ. The DOI currently stored in the Number column for Reliably-stabilizing piecewise-affine neural network controllers is displayed as a DOI link instead of an issue number.
+
+## Validation
+
+Checked that the original CSV is byte-for-byte unchanged, all 64 records are assigned once, category counts reconcile, every current record has a display year, and the data/configuration files parse. Full Jekyll rendering must be confirmed by the GitHub Pages build because this environment does not have Ruby/Jekyll installed.

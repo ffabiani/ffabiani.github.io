@@ -1,0 +1,62 @@
+# Classification rules and documented exceptions for the Scholar CSV.
+# Categories: preprint, journal, conference, other.
+# Override keys must match the full Title in publications.csv.
+# Source fields document decisions; they are not displayed on the website.
+groups:
+- id: preprint
+  title: Preprints
+- id: journal
+  title: Journal papers
+- id: conference
+  title: Conference papers
+- id: other
+  title: Other works
+journal_venues:
+- autonomous robots
+- ocean engineering
+- ieee control systems letters
+- automatica
+- ieee transactions on intelligent transportation systems
+- ieee transactions on automatic control
+- scientific reports
+- international journal of robust and nonlinear control
+- ieee transactions on control of network systems
+- journal of optimization theory and applications
+- ieee transactions on aerospace and electronic systems
+- ieee signal processing letters
+- european journal of control
+conference_markers:
+- conference
+- 'oceans '
+- compit
+- ifac-papersonline
+- benelux meeting
+- international astronautical congress
+overrides:
+  Potential game-theoretic control of complex multi-agent systems:
+    category: other
+    venue: PhD thesis, University of Pisa
+    url: https://etd.adm.unipi.it/t/etd-04302019-134743/
+    note: PhD thesis
+    source: https://etd.adm.unipi.it/t/etd-04302019-134743/
+  Receding horizon games with stability guarantees:
+    category: conference
+    venue: 65th IEEE Conference on Decision and Control (CDC)
+    year: '2026'
+    source: https://cse.lab.imtlucca.it/~bemporad/publications/
+  The optimal transport paradigm enables data compression in data-driven robust control:
+    category: conference
+    venue: 2021 American Control Conference (ACC)
+    year: '2021'
+    url: https://ieeexplore.ieee.org/document/9483139/
+    source: https://users.ox.ac.uk/~engs1373/kw_optimization.html
+    source_note: Published at ACC 2021; retain the arXiv link from the export. Pages omitted because the
+      available metadata conflicts.
+  'Charging Plug-in Electric Vehicles: A Game Theoretic Approach':
+    category: conference
+    note: Conference abstract
+    source: https://research.rug.nl/en/publications/charging-plug-in-electric-vehicles-a-game-theoretic-approach/
+  Identification of non-causal systems with random switching modes (extended version):
+    category: preprint
+    note: Extended arXiv version of the Automatica paper listed under Journal papers.
+    source: https://arxiv.org/abs/2503.13973
