@@ -18,7 +18,13 @@ The page has no author sidebar, uses the available content width, and inherits y
 - Conference papers: 28 entries, including one explicitly labelled conference abstract.
 - Other works: your 2019 PhD thesis.
 
-All 64 CSV records appear once. Each section is grouped by year, newest first; within each year, titles are alphabetical. The totals count records, not necessarily distinct underlying research contributions. The extended arXiv version and its journal paper remain separate because the supplied CSV contains both.
+All 64 CSV records appear once. Each section is grouped by year, newest first. Within a year, the original CSV row order is reversed. The export contains no month or day, so this is a tie-breaker rather than a verified chronology within the year. The totals count records, not necessarily distinct underlying research contributions. The extended arXiv version and its journal paper remain separate because the supplied CSV contains both.
+
+Journals use [J1], [J2], etc.; conferences use [C1], [C2], etc.; preprints use [P1], [P2], etc.; Other works uses [O1], etc. Each category starts at 1 for its newest entry and continues across year headings. Numbers are generated on every build and can change when new entries are added.
+
+Every entry displays its authors in their original order. Only Filippo Fabiani's name is bold, matching the export's forms Fabiani, Filippo; Fabiani, F; and F Fabiani (with or without periods in initials). The comma-separated author list on the COMPIT paper is handled as individual authors. Original CSV values are unchanged.
+
+If you installed the previous bundle, replace only `_pages/publications.md` and `assets/css/publications.css` for this revision. The CSV and classification YAML are unchanged.
 
 ## Updating your publications
 
@@ -53,4 +59,4 @@ The remaining venue/year/volume/page data is displayed as supplied by Google Sch
 
 ## Validation
 
-Checked that the original CSV is byte-for-byte unchanged, all 64 records are assigned once, category counts reconcile, every current record has a display year, and the data/configuration files parse. Full Jekyll rendering must be confirmed by the GitHub Pages build because this environment does not have Ruby/Jekyll installed.
+Checked that the original CSV is byte-for-byte unchanged, all 64 records are assigned once, category counts reconcile, every current record has a display year, and the data/configuration files parse. Ordering, continuous category labels and author matching are checked against the supplied records. Full Jekyll rendering must be confirmed by the GitHub Pages build because this environment does not have Ruby/Jekyll installed.

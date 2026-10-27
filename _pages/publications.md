@@ -1,6 +1,6 @@
 ---
 layout: single
-title: ""
+title: "Publications"
 permalink: /publications/
 author_profile: false
 classes: wide no-sidebar publications-page
@@ -8,8 +8,9 @@ classes: wide no-sidebar publications-page
 
 <link rel="stylesheet" href="{{ '/assets/css/publications.css' | relative_url }}">
 
-{% assign papers = site.data.publications | sort: 'Title' %}
+{% assign papers = site.data.publications | reverse %}
 {% assign rules = site.data.publication_rules %}
+{% assign highlighted_authors = 'fabiani,filippo|fabiani,f|filippofabiani|ffabiani' | split: '|' %}
 {% capture year_values %}{% for paper in papers %}{% assign metadata = rules.overrides[paper.Title] %}{% assign year = metadata.year | default: paper.Year | default: '0000' | append: '' | strip %}{{ year }}|{% endfor %}{% endcapture %}
 {% assign years = year_values | split: '|' | uniq | sort | reverse %}
 
@@ -21,9 +22,16 @@ classes: wide no-sidebar publications-page
 
 {% for group in rules.groups %}
 {% assign group_count = 0 %}
+{% case group.id %}
+  {% when 'journal' %}{% assign label_prefix = 'J' %}
+  {% when 'conference' %}{% assign label_prefix = 'C' %}
+  {% when 'preprint' %}{% assign label_prefix = 'P' %}
+  {% else %}{% assign label_prefix = 'O' %}
+{% endcase %}
 {% capture group_content %}
 {% for year in years %}
 {% assign year_count = 0 %}
+{% assign year_start = group_count | plus: 1 %}
 {% capture year_content %}
 {% for paper in papers %}
 {% assign metadata = rules.overrides[paper.Title] %}
@@ -61,11 +69,28 @@ classes: wide no-sidebar publications-page
 {% endif %}
 {% assign paper_url = paper_url | default: doi_url | default: arxiv_url %}
 <li class="publication-item">
+  <span class="publication-label">[{{ label_prefix }}{{ group_count }}]</span>
+  <div class="publication-details">
   <div class="publication-title">{% if paper_url != '' %}<a href="{{ paper_url | escape }}">{{ paper.Title | escape }}</a>{% else %}{{ paper.Title | escape }}{% endif %}</div>
-  <div class="publication-authors">{% assign authors = paper.Authors | strip | split: ';' %}{% for author in authors %}{{ author | strip | escape }}{% unless forloop.last %}; {% endunless %}{% endfor %}</div>
+  <div class="publication-authors">
+    {% assign authors = paper.Authors | strip | split: ';' %}
+    {% if authors.size == 1 %}
+      {% assign author_line = authors | first | strip %}
+      {% assign author_line_lower = author_line | downcase %}
+      {% if author_line_lower contains 'f fabiani' or author_line_lower contains 'f. fabiani' or author_line_lower contains 'filippo fabiani' %}
+        {% assign authors = author_line | split: ',' %}
+      {% endif %}
+    {% endif %}
+    {% for author in authors %}
+      {% assign author_name = author | strip %}
+      {% assign author_key = author_name | downcase | remove: '.' | remove: ' ' %}
+      {% if highlighted_authors contains author_key %}<strong>{{ author_name | escape }}</strong>{% else %}{{ author_name | escape }}{% endif %}{% unless forloop.last %}; {% endunless %}
+    {% endfor %}
+  </div>
   <div class="publication-venue">{% if venue != '' %}<em>{{ venue | escape }}</em>{% endif %}{% if paper.Volume != nil and paper.Volume != '' %}, vol. {{ paper.Volume | escape }}{% endif %}{% if issue != '' %}, no. {{ issue | escape }}{% endif %}{% if paper.Pages != nil and paper.Pages != '' %}, {% if paper.Pages contains '-' %}pp. {% else %}Article {% endif %}{{ paper.Pages | escape }}{% endif %}{% if paper_year != '0000' %}{% if venue != '' %}, {% endif %}{{ paper_year }}{% endif %}.</div>
   {% if metadata.note %}<div class="publication-note">{{ metadata.note | escape }}</div>{% endif %}
   {% if arxiv_url != '' and arxiv_url != paper_url %}<div class="publication-links"><a href="{{ arxiv_url | escape }}">arXiv version</a></div>{% endif %}
+  </div>
 </li>
 {% endif %}
 {% endif %}
@@ -73,7 +98,7 @@ classes: wide no-sidebar publications-page
 {% endcapture %}
 {% if year_count > 0 %}
 <h3 class="publication-year">{% if year == '0000' %}Year not specified{% else %}{{ year }}{% endif %}</h3>
-<ol class="publication-list">{{ year_content }}</ol>
+<ol class="publication-list" start="{{ year_start }}" role="list">{{ year_content }}</ol>
 {% endif %}
 {% endfor %}
 {% endcapture %}
