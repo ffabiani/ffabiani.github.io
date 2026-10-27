@@ -121,3 +121,51 @@
 .news-list li {
   margin-bottom: 0.8em;
 }
+
+/* Student list */
+.page__content .team-list {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0;
+}
+
+.team-member {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+  margin-bottom: 1.5rem;
+}
+
+/* Identical square photographs */
+.page__content .team-photo {
+  display: block;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0;
+}
+
+.page__content .team-details h3 {
+  margin: 0 0 0.35em;
+  font-size: 18px;
+}
+
+.page__content .team-details p {
+  margin: 0 0 0.5em;
+  text-align: left;
+}
+
+/* Smaller photographs on narrow screens */
+@media (max-width: 480px) {
+  .team-member {
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .page__content .team-photo {
+    width: 90px;
+    height: 90px;
+  }
+}

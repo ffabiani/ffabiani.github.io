@@ -1,0 +1,14 @@
+- name: "Saugat Shahi"
+  photo: "/assets/images/team/SS.jpg"
+  affiliation: "IMT Lucca (co-supervised with M. Zanon)"
+  research: "Real-time coordination of autonomous vehicles at unsignalized intersections."
+
+- name: "Yanxin Zhang"
+  photo: "/assets/images/team/YZ.png"
+  affiliation: "Beijing Institute of Technology (co-supervised with C. Yu)"
+  research: "Finite sample methods for system identification."
+
+- name: "Emmanouil Dimou "
+  photo: "/assets/images/team/ED.png"
+  affiliation: "IMT Lucca (co-supervised with A. Bemporad)"
+  research: "Finite sample methods for system identification."
