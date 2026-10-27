@@ -49,7 +49,7 @@
 
 /* Page heading: "About me" */
 .page__title {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.2;
 }
 
@@ -60,7 +60,7 @@
 
 /* Main subsection headings */
 .page__content h1 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -168,4 +168,11 @@
     width: 90px;
     height: 90px;
   }
+}
+
+.no-sidebar .page {
+  float: none;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
 }

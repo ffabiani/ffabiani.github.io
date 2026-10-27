@@ -21,9 +21,6 @@ author:
   bio: "Associate Professor<br>[IMT School for Advanced Studies Lucca](https://www.imtlucca.it/en/homepage)"
   location: "Lucca (IT)"
   links:
-    - label: "ffabiani"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/ffabiani"
     # To add a link, remove the # at the start of its three lines,
     # then replace the example address with your own.
     - label: "filippo.fabiani@imtlucca.it"
@@ -32,6 +29,12 @@ author:
     - label: "Google Scholar"
       icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.com/citations?user=eXdKzcUAAAAJ&hl=en"
+    - label: "ffabiani"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/ffabiani"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "www.linkedin.com/in/filippo-fabiani-90a4a010a"
     # - label: "University profile"
     #   icon: "fas fa-fw fa-building-columns"
     #   url: "YOUR-UNIVERSITY-PROFILE-URL"
@@ -58,7 +61,7 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: false
       comments: false
       share: false

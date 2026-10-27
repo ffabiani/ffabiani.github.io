@@ -1,7 +1,7 @@
 ---
-title: "Publications"
+title: ""
 permalink: /publications/
-classes: wide
+classes: wide no-sidebar
 ---
 
 Add your publications and links here.

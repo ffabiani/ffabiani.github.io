@@ -1,9 +1,9 @@
 ---
-title: "Vacancies"
+title: ""
 permalink: /vacancies/
-classes: wide
+classes: wide no-sidebar
 ---
-<p>We do not currently have any advertised positions.</p>
+<p>We are currently not advertising any position.</p>
 
 
 <h2>General interest statement</h2>

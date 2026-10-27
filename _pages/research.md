@@ -1,7 +1,7 @@
 ---
-title: "Research"
+title: ""
 permalink: /research/
-classes: wide
+classes: wide no-sidebar
 ---
 
 Describe your research interests and current projects.

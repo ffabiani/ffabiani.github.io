@@ -1,7 +1,7 @@
 ---
-title: "Teaching"
+title: ""
 permalink: /teaching/
-classes: wide
+classes: wide no-sidebar
 ---
 
 Teaching information will be added here.

@@ -1,7 +1,7 @@
 ---
-title: "Team"
+title: ""
 permalink: /team/
-classes: wide
+classes: wide no-sidebar
 ---
 
 <h2>PhD students</h2>
@@ -24,5 +24,9 @@ classes: wide
   </li>
 {% endfor %}
 </ul>
+
+<h2>Postdoctoral researchers</h2>
+
+<h2>Long-term visitors</h3>
 
 
