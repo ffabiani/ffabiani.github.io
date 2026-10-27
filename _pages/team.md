@@ -17,7 +17,15 @@ classes: wide no-sidebar
       height="140"
       loading="lazy">
     <div class="team-details">
-      <h3>{{ student.name | escape }}</h3>
+        <h3>
+            {% if student.url and student.url != "" %}
+                <a href="{{ student.url | escape }}">
+                {{ student.name | escape }}
+                </a>
+            {% else %}
+                {{ student.name | escape }}
+            {% endif %}
+        </h3>
       <p class="team-affiliation">{{ student.affiliation | escape }}</p>
       <p>{{ student.research | escape }}</p>
     </div>
@@ -26,7 +34,7 @@ classes: wide no-sidebar
 </ul>
 
 <h2>Postdoctoral researchers</h2>
+Coming soon
 
 <h3>Long-term visitors</h3>
-
-
+Coming soon

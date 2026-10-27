@@ -2,13 +2,16 @@
   photo: "/assets/images/team/SS.jpg"
   affiliation: "IMT Lucca (co-supervised with M. Zanon)"
   research: "Real-time coordination of autonomous vehicles at unsignalized intersections"
+  url: "https://scholar.google.com/citations?user=HiTIC-sAAAAJ&hl=en"
 
 - name: "Yanxin Zhang"
   photo: "/assets/images/team/YZ.png"
   affiliation: "Beijing Institute of Technology (co-supervised with C. Yu)"
   research: "Finite sample methods for system identification"
+  url: ""
 
 - name: "Emmanouil Dimou "
   photo: "/assets/images/team/ED.png"
   affiliation: "IMT Lucca (co-supervised with A. Bemporad)"
   research: "Game-theoretic model predictive control"
+  url: ""
