@@ -4,16 +4,7 @@ permalink: /teaching/
 classes: wide no-sidebar
 ---
 
-Teaching information will be added here.
+<h2>PhD courses</h2>
+<p>**Algorithmic Game Theory**---Information will be available soon</p>
 
-<!-- Replace the sentence above with your courses and teaching materials.
-
-## Current courses
-
-- **Course title** — institution, academic year.
-
-## Previous teaching
-
-- **Course title** — institution, academic year.
-
--->
+<h2>MSc courses</h2>
