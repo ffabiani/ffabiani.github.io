@@ -13,7 +13,22 @@ classes: wide
 
 <p> Since 2025, I am an Associate Editor for the <a href="https://ieee-cssletters.uniroma2.it/">IEEE Control Systems Letters</a>. I was also an Associate Editor, Conference Editorial Board: <a href="https://euca-ecc.org/">EUCA</a> and L4DC.</p>
 
+<style>
+.research-block { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; margin: 1em 0; }
+.research-block .research-text { flex: 1 1 320px; min-width: 0; }
+.research-block .research-text p { margin-top: 0; }
+.research-block .research-figure { flex: 1 1 380px; max-width: 480px; margin: 0 auto; }
+.research-block .research-figure svg { width: 100%; height: auto; display: block; }
+</style>
+
+<div class="research-block">
+<div class="research-text">
 <p>My research combines <b>robust control</b>, <b>system identification</b>, <b>machine learning</b> and <b>optimization</b>, and concentrates on developing <b>data-driven theoretical tools</b> and <b>algorithmic methods</b> for learning models and computing control decisions with <b>explicit guarantees</b>. Applications span from optimal control of multi-agent and uncertain systems, such as <b>power</b> and <b>traffic network</b>, to emerging control applications in <b>smart grids</b> and <b>smart cities</b>.</p>
+</div>
+<figure class="research-figure">
+{% include research/research_radial.svg %}
+</figure>
+</div>
 
 
 {% if site.cv_file and site.cv_file != "" %}
