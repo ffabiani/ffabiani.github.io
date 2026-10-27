@@ -27,6 +27,6 @@ classes: wide no-sidebar
 
 <h2>Postdoctoral researchers</h2>
 
-<h2>Long-term visitors</h3>
+<h3>Long-term visitors</h3>
 
 
