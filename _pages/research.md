@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Research"
+title: ""
 permalink: /research/
 author_profile: false
 classes: wide no-sidebar research-page
@@ -8,30 +8,25 @@ classes: wide no-sidebar research-page
 
 <link rel="stylesheet" href="{{ '/assets/css/research.css' | relative_url }}">
 
-My research combines control theory, mathematical optimization and game theory to study how dynamical systems and autonomous agents can learn and make reliable decisions. A common thread is the design of algorithms that use limited data while providing guarantees on stability, convergence and performance.
+I develop methods for learning models and computing control decisions with explicit guarantees. My research combines robust control, system identification, statistical learning and optimization, with applications to energy systems and autonomous decision-making. Two questions guide this work: what finite observations can establish about an unknown physical system, and how reliably an algorithm can act using limited data and computation. Game theory extends these questions to systems of interacting agents.
 
-## Learning-based control and system identification
+## Finite-data certificates for closed-loop systems
 
-Control applications often provide many measurements but only incomplete models of the underlying dynamics. Operating conditions can change, different modes can become active, and accurate models built from physical principles may be difficult to obtain. Learning offers a way to use the available measurements, but prediction accuracy alone does not ensure a well-behaved closed loop: model errors and control actions influence one another. This motivates methods that learn useful representations while explicitly accounting for stability and constraints.
+Accurate state prediction does not by itself establish that a physical system will remain stable under feedback. This gap matters for nonnormal dynamics, where disturbances may grow transiently even when a fitted model is asymptotically stable, and for nonlinear systems operating in sparsely observed regions. The central question is what data are sufficient to certify stability, invariance or disturbance response of the unknown plant under a specified controller.
 
 <figure class="research-figure">
-<div class="research-figure-viewport" tabindex="0" aria-label="Learning and control illustration; scroll horizontally on small screens">
+<div class="research-figure-viewport" tabindex="0" aria-label="Finite-data plant certification illustration; scroll horizontally on small screens">
 {% include research/learning.svg %}
 </div>
-<figcaption>Learning dynamics from trajectories across switching regimes, then using a learned representation for feedback control within admissible states. The trajectories and certificate contours are illustrative.</figcaption>
+<figcaption>A structured confidence set represents uncertainty in the plant. A fixed feedback law induces a family of closed-loop dynamics, whose transient response and stability margins must be assessed across the set. The model set and responses shown here are illustrative.</figcaption>
 </figure>
 
-I develop methods to learn dynamical models and design controllers from data, with particular attention to nonlinear, hybrid and switching systems. My work includes neural network approaches to system identification, the identification of systems with switching dynamics, and the use of learned models for control. I also investigate how neural networks can approximate control laws efficiently while retaining stability guarantees.
+My published work on control-oriented identification and certified neural controllers provides complementary foundations. My research agenda is to construct finite-sample confidence sets for plant dynamics under explicit noise and excitation assumptions, and to test a chosen closed-loop property uniformly over those sets. For linear systems, this includes preserving directional information in estimation uncertainty and studying Lyapunov inequalities, stability margins, pseudospectral sensitivity and disturbance bounds. Whenever the confidence set contains the true plant, a property established for every model in the set also applies to that plant.
 
-Further directions include fault-tolerant control through inductive synthesis, direct data-driven control using closed-loop measurements, and the relationship between learning generalization and robust performance. The aim is to connect the flexibility of learning methods with the guarantees needed when they operate inside a feedback loop.
+I aim to relate the required excitation and sample size to the property being certified. Further directions include regional guarantees for nonlinear or switching dynamics, accounting jointly for plant uncertainty and controller approximation, and using dependent observations collected under feedback. Data coverage and closed-loop reachability determine where a certificate can apply; persistent disturbances may call for an invariant region or an input-to-state bound. These questions make the controller, operating region and sampling assumptions integral parts of the guarantee.
 
 <p class="research-papers-label">Representative publications</p>
 <ul class="research-papers" role="list">
-<li>
-<a class="research-paper-title" href="{{ '/publications/' | relative_url }}#J27">[J27] Fault-tolerant control of nonlinear systems: An inductive synthesis approach</a>
-<span class="research-paper-authors">D. Masti; D. Grande; A. Peruffo; <strong>F. Fabiani</strong></span>
-<span class="research-paper-citation">Automatica, vol. 187, pp. 112897, 2026.</span>
-</li>
 <li>
 <a class="research-paper-title" href="{{ '/publications/' | relative_url }}#J21">[J21] A neural network-based approach to hybrid systems identification for control</a>
 <span class="research-paper-authors"><strong>F. Fabiani</strong>; B. Stellato; D. Masti; P. J. Goulart</span>
@@ -41,6 +36,45 @@ Further directions include fault-tolerant control through inductive synthesis, d
 <a class="research-paper-title" href="{{ '/publications/' | relative_url }}#J13">[J13] Reliably-stabilizing piecewise-affine neural network controllers</a>
 <span class="research-paper-authors"><strong>F. Fabiani</strong>; P. J. Goulart</span>
 <span class="research-paper-citation">IEEE Transactions on Automatic Control, vol. 68, no. 9, pp. 5201–5215, 2023.</span>
+</li>
+<li>
+<a class="research-paper-title" href="{{ '/publications/' | relative_url }}#J8">[J8] Probabilistic stabilizability certificates for a class of black-box linear systems</a>
+<span class="research-paper-authors"><strong>F. Fabiani</strong>; K. Margellos; P. J. Goulart</span>
+<span class="research-paper-citation">IEEE Control Systems Letters, vol. 6, pp. 584–589, 2022.</span>
+</li>
+</ul>
+
+## Generalization in control decisions
+
+Even when plant dynamics are known, a control decision may depend on uncertain prices, loads or disturbances. In storage dispatch, resource allocation and predictive control, an embedded optimizer must also return an action within a limited computational budget. A small residual on the sampled problem does not automatically establish the action's performance or feasibility under the underlying distribution. The research question concerns the decision actually returned after a finite number of iterations.
+
+<figure class="research-figure">
+<div class="research-figure-viewport" tabindex="0" aria-label="Statistical and numerical error illustration; scroll horizontally on small screens">
+{% include research/uncertainty.svg %}
+</div>
+<figcaption>Finite data shift the optimization problem, while a limited iteration budget leaves numerical error. Separating these effects helps assess the implemented decision. The schematic bound illustrates why reducing an empirical residual need not improve generalization when sensitivity to the data grows.</figcaption>
+</figure>
+
+My work on finite-sample operator methods and data-driven least squares provides starting points for separating statistical error from finite-iteration error. I aim to connect computable residuals or primal-dual gaps to out-of-sample cost, distance to a solution set and constraint risk, under the necessary statistical and regularity assumptions. Feasibility requires its own argument: known constraints can be checked directly, while uncertain constraints call for a bound on violation risk. When solutions are nonunique, a certificate for a set of admissible decisions may be more useful than distance to one selected optimum.
+
+I study this agenda through a systems view of optimization: an algorithm is a discrete-time dynamical system whose iterations can attenuate or amplify perturbations in the data. Incremental stability and dissipativity offer tools for analysing that sensitivity and the roles of step size, regularization and stopping. Further directions concern repeated decisions under feedback, where decision-level bounds must be combined with constraint tightening, invariant regions or terminal conditions to address recursive feasibility and stability. Sequentially valid guarantees under adaptive data collection and stopping are a further objective, with assumptions stated explicitly.
+
+<p class="research-papers-label">Representative publications</p>
+<ul class="research-papers" role="list">
+<li>
+<a class="research-paper-title" href="{{ '/publications/' | relative_url }}#J28">[J28] Finite-sample guarantees for data-driven forward-backward operator methods</a>
+<span class="research-paper-authors"><strong>F. Fabiani</strong>; B. Franci</span>
+<span class="research-paper-citation">IEEE Transactions on Automatic Control, vol. 71, no. 7, pp. 4665–4677, 2026.</span>
+</li>
+<li>
+<a class="research-paper-title" href="{{ '/publications/' | relative_url }}#J26">[J26] Concentration inequalities for semidefinite least squares based on data</a>
+<span class="research-paper-authors"><strong>F. Fabiani</strong>; A. Simonetto</span>
+<span class="research-paper-citation">IEEE Signal Processing Letters, vol. 33, pp. 326–330, 2026.</span>
+</li>
+<li>
+<a class="research-paper-title" href="{{ '/publications/' | relative_url }}#P5">[P5] Generalization as a robust performance property of learning-enabled dynamical systems</a>
+<span class="research-paper-authors"><strong>F. Fabiani</strong></span>
+<span class="research-paper-citation">submitted to the IEEE Transactions on Automatic Control, 2026.</span>
 </li>
 </ul>
 
@@ -78,38 +112,4 @@ Applications motivating this work include automated driving, electric vehicle ch
 </li>
 </ul>
 
-## Probabilistic guarantees and optimization under uncertainty
-
-A finite dataset cannot represent every situation that a controller or decision-making algorithm may encounter. A solution that performs well on observed samples may violate constraints or behave poorly under new disturbances, model errors or interactions. Assessing reliability therefore requires more than an empirical performance score. A useful guarantee specifies the property being protected, the assumptions under which it holds, and the confidence supported by the available data.
-
-<figure class="research-figure">
-<div class="research-figure-viewport" tabindex="0" aria-label="Distributional uncertainty illustration; scroll horizontally on small screens">
-{% include research/uncertainty.svg %}
-</div>
-<figcaption>A sample-based reference distribution and plausible alternatives motivate decisions that remain feasible across an uncertainty set. The distributions and decision geometry are schematic; statistical guarantees require explicit modelling and sampling assumptions.</figcaption>
-</figure>
-
-I investigate probabilistic feasibility and stabilizability certificates, distributionally robust games, and guarantees for uncertain variational inequalities and coalitional games. A distributionally robust formulation accounts for a family of plausible probability distributions. This provides a way to express uncertainty about the model itself when computing decisions.
-
-My recent work develops finite-sample guarantees for data-driven operator methods and stochastic games, using tools such as concentration inequalities and martingale analysis. I also study optimal transport methods for robust control and data compression. The broader aim is to understand how the amount and quality of information affect the guarantees that can be attached to a computed solution or controller.
-
-<p class="research-papers-label">Representative publications</p>
-<ul class="research-papers" role="list">
-<li>
-<a class="research-paper-title" href="{{ '/publications/' | relative_url }}#J28">[J28] Finite-sample guarantees for data-driven forward-backward operator methods</a>
-<span class="research-paper-authors"><strong>F. Fabiani</strong>; B. Franci</span>
-<span class="research-paper-citation">IEEE Transactions on Automatic Control, vol. 71, no. 7, pp. 4665–4677, 2026.</span>
-</li>
-<li>
-<a class="research-paper-title" href="{{ '/publications/' | relative_url }}#J16">[J16] On distributionally robust generalized Nash games defined over the Wasserstein ball</a>
-<span class="research-paper-authors"><strong>F. Fabiani</strong>; B. Franci</span>
-<span class="research-paper-citation">Journal of Optimization Theory and Applications, vol. 199, pp. 298–309, 2023.</span>
-</li>
-<li>
-<a class="research-paper-title" href="{{ '/publications/' | relative_url }}#J10">[J10] Probabilistic feasibility guarantees for solution sets to uncertain variational inequalities</a>
-<span class="research-paper-authors"><strong>F. Fabiani</strong>; K. Margellos; P. J. Goulart</span>
-<span class="research-paper-citation">Automatica, vol. 137, pp. 110120, 2022.</span>
-</li>
-</ul>
-
-See my [full publication list]({{ '/publications/' | relative_url }}) for further work in these areas.
+<!-- See my [full publication list]({{ '/publications/' | relative_url }}) for further work in these areas. -->

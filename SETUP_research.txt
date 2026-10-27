@@ -1,30 +1,92 @@
 Website update: Research and Publications
 
-Copy these four files to the same paths in your GitHub repository:
+For this statement-alignment revision, replace these three files in your GitHub
+repository, preserving their paths:
 
   _pages/research.md
-  _pages/publications.md
-  assets/css/research.css
-  assets/css/publications.css
+  _includes/research/learning.svg
+  _includes/research/uncertainty.svg
+
+Keep the research CSS and the game-theory SVG from the previous bundle. Copies
+are included here for first-time installation, along with the Publications page
+and its CSS. There are seven website files in total.
+
+The _includes folder is required: the page inserts these three original SVG
+figures during the Jekyll build. Each image has an accessible title/description
+and inherits the active light/dark theme's text colour. No image service or
+additional JavaScript/plugin is needed. The figures use more of the page width;
+on a small screen, each figure can be scrolled horizontally to keep its labels
+readable. The surrounding text and captions still fit the viewport.
+
+DIAGRAM_PREVIEW.png is a reference sheet showing the three figures. It is included
+for review and does not need to be uploaded to the website.
+
+The ZIP also includes the existing _pages/publications.md and
+assets/css/publications.css. If you have already installed the CV-based
+publication page, those two files have not changed. If installing this bundle
+for the first time, copy all seven website files.
 
 Replace the existing page files rather than creating a second page at the same URL.
-Upload the contents of this ZIP to the repository root, preserving the _pages and
-assets folders. Do not upload the outer website-update folder as a subfolder.
+Upload the contents of this ZIP to the repository root, preserving the _pages,
+assets and _includes folders. Do not upload the outer website-update folder as a subfolder.
 Commit, then wait for the GitHub Pages deployment to finish successfully.
 The existing Research and Publications navigation links already target these pages.
 
 RESEARCH
 
-The page contains an introductory paragraph and three research directions:
-  - Learning-based control and system identification
-  - Game theory and distributed decision-making
-  - Probabilistic guarantees and optimization under uncertainty
+The research page is aligned with the Research proposal section (pages 4-6) of
+DF26SRFC_Fabiani_F(3).pdf, uploaded on 27 October 2026. It now has three topics:
+  1. Finite-data certificates for closed-loop systems
+  2. Generalization in control decisions
+  3. Game theory and distributed decision-making
 
-The descriptions are based on the interests and publications in CV_FF(5).pdf,
-uploaded on 27 October 2026. They are written in the first person for your website.
-They do not claim project outcomes, deployments or research activities absent from
-the CV. Headings inherit your theme's colours and use the same 18px size as the
-page title. The page has no author sidebar.
+The opening explains the distinction between uncertainty about an unknown plant
+and reliability of a decision computed from finite data and a limited iteration
+budget. The first two sections retain that distinction in their motivation,
+methods and research aims. Proposed work is described as an agenda or objective;
+it is not presented as an already established result.
+
+The game theory section, its SVG, and its three references are retained verbatim
+and placed after the statement's two main research lines. The page does not copy
+application-specific employment plans, funding requests or personal contact data.
+
+Each direction includes background, a conceptual figure and three representative
+publications. Publication metadata comes from CV_FF(5).pdf and matches the
+existing Publications page:
+  Plant certificates: J21, J13, J8
+  Decision generalization: J28, J26, P5
+  Game theory: J18, J15, J5
+
+P5 remains labelled as a preprint through its identifier and submitted-paper
+citation. F. Fabiani is bold in every author list. If publications are renumbered,
+update their #J... or #P... links in the Research page.
+
+Headings remain 18px, colours follow the light/dark theme, and no author sidebar
+is displayed. The stylesheet and all 62 publication entries are unchanged.
+
+FIGURE EXAMPLES
+
+Plant certificates (learning.svg): a rotated ellipse illustrates directional
+plant-parameter uncertainty. A linear image of sampled points on that ellipse
+produces a synthetic family of stable, nonnormal closed-loop matrices. The
+induced matrix 2-norms of their powers illustrate transient amplification and
+model-to-model variation. This is a conceptual illustration of the certification
+question, not a confidence set estimated from experimental data or a proof of a
+uniform certificate for a physical plant.
+
+Decision generalization (uncertainty.svg): quadratic objective contours show an
+underlying optimum and an empirical optimum. Gradient descent is stopped after
+five iterations, separating the returned iterate's numerical error from the
+statistical shift in the optimum. A separate schematic plot shows a decaying
+numerical term, a growing sensitivity-related statistical term, and their sum,
+for a fixed sample size. These curves illustrate a possible trade-off under
+appropriate assumptions; they are not a measured convergence result or a
+universal finite-sample bound.
+
+Games (games.svg): the two-agent example has x1 >= 0, x2 >= 0, x1+x2 <= 1,
+J1=(x1-0.22-0.35*x2)^2, and J2=(x2-0.16-0.25*x1)^2. Constrained best-response
+updates from (0.76,0.10) approach the intersection of the best-response curves.
+The accompanying network illustrates distributed decision-making.
 
 PUBLICATIONS
 
@@ -62,6 +124,7 @@ VALIDATION
 
 The generated HTML is checked for all 62 records, exact descending category labels,
 complete author lists, one bold F. Fabiani per record, valid category anchors and
-preserved citation text. The research page has exactly three research sections.
+preserved citation text. The research page has exactly three research sections, three accessible SVG diagrams,
+and nine representative-paper links checked against the publication entries.
 The full Minimal Mistakes/Jekyll build still needs the GitHub Pages deployment;
 Ruby/Jekyll and a browser are not available in the editing environment.
