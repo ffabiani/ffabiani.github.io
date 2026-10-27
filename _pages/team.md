@@ -36,5 +36,5 @@ classes: wide no-sidebar
 <h2>Postdoctoral researchers</h2>
 Coming soon
 
-<h3>Long-term visitors</h3>
+<h2>Long-term visitors</h2>
 Coming soon
