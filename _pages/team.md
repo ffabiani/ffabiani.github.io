@@ -4,6 +4,8 @@ permalink: /team/
 classes: wide no-sidebar
 ---
 
+I am privileged and fortunate enough to work with really smart people.
+
 <h1>PhD students</h1>
 
 <ul class="team-list">

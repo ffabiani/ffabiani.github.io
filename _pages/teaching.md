@@ -8,6 +8,8 @@ classes: wide no-sidebar teaching-page
 
 <link rel="stylesheet" href="{{ '/assets/css/teaching.css' | relative_url }}">
 
+A list of currently offered courses.
+
 <h1>PhD teaching</h1>
 
 <h2>Algorithmic Game Theory (IMT Lucca)</h2>
