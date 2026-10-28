@@ -32,7 +32,7 @@ classes: wide no-sidebar publications-page
 {% assign label_number = group_count %}
 {% assign label_prefix = group_prefixes[forloop.index0] %}
 <section class="publication-section" aria-labelledby="{{ group_id }}">
-<h2 id="{{ group_id }}">{{ group_titles[forloop.index0] }} <span class="publication-count">({{ group_count }})</span></h2>
+<h1 id="{{ group_id }}">{{ group_titles[forloop.index0] }} <span class="publication-count">({{ group_count }})</span></h1>
 {% if group_count > 0 %}
 <ol class="publication-list" reversed start="{{ group_count }}" role="list">
 {% for paper in entries %}
