@@ -7,7 +7,8 @@
 }
 .teaching-page .page__title,
 .teaching-page .page__content h2,
-.teaching-page .page__content h3 {
+.teaching-page .page__content h3,
+.teaching-page .page__content h4 {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.35;
@@ -19,6 +20,21 @@
 .teaching-page .page__content h3 {
   margin-top: 1.2em;
   margin-bottom: 0.5em;
+}
+.teaching-page .page__content h4 {
+  margin-top: 1.5em;
+  margin-bottom: 0.6em;
+}
+.teaching-page .page__content ul,
+.teaching-page .page__content ol {
+  text-align: left;
+}
+.teaching-page .page__content li {
+  margin-bottom: 0.35em;
+}
+.teaching-page .page__content li > ul {
+  margin-top: 0.35em;
+  margin-bottom: 0.8em;
 }
 .teaching-page .teaching-details {
   display: grid;
