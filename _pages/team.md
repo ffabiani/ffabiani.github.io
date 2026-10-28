@@ -4,7 +4,7 @@ permalink: /team/
 classes: wide no-sidebar
 ---
 
-# PhD students
+<h1>PhD students</h1>
 
 <ul class="team-list">
 {% for student in site.data.students %}
@@ -33,11 +33,11 @@ classes: wide no-sidebar
 {% endfor %}
 </ul>
 
-# Postdoctoral researchers
+<h1>Postdoctoral researchers</h1>
 Coming soon
 
-# Long-term visitors
+<h1>Long-term visitors</h1>
 Coming soon
 
-# Msc students
+<h1>Msc students</h1>
 Coming soon
