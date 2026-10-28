@@ -10,13 +10,13 @@ classes: wide no-sidebar teaching-page
 
 A list of currently offered courses.
 
-<h1>PhD teaching</h1>
+<h1>PhD courses</h1>
 
 <h2>Algorithmic Game Theory (IMT Lucca)</h2>
 
 This PhD course is planned for **September 2027**. Further information about the course content, schedule and teaching materials will be available soon.
 
-<h1>MSc teaching</h1>
+<h1>MSc courses</h1>
 
 <h2>Optimization and Machine Learning for Dynamical Systems (University of Florence)</h2>
 
