@@ -10,7 +10,7 @@ classes: wide no-sidebar research-page
 
 Two main questions guide my current work: what finite observations can establish about an unknown physical system, and how reliably an algorithm can act using limited data and computation. Game theory extends these questions to systems of interacting decision-makers.
 
-## Finite-data certificates for closed-loop systems
+# Finite-data certificates for closed-loop systems
 
 Accurate state prediction does not, by itself, establish that a physical system possesses certain structural properties, e.g., stability under feedback action. This gap matters nonnormal dynamics, where disturbances may grow transiently even when a fitted model is asymptotically stable, and for nonlinear systems operating in sparsely observed regions. The central question is what data are sufficient to certify stability, invariance or disturbance response of the unknown plant under a specified controller.
 
@@ -44,7 +44,7 @@ I aim to relate the required excitation and sample size to the property being ce
 </li>
 </ul>
 
-## Generalization in control decisions
+# Generalization in control decisions
 
 Even when plant dynamics are known, a control decision may depend on uncertain prices, loads or disturbances. In storage dispatch, resource allocation and predictive control, an embedded optimizer must also return an action within a limited computational budget. A small residual on the sampled problem does not automatically establish the action's performance or feasibility under the underlying distribution. The research question concerns the decision actually returned after a finite number of iterations.
 
@@ -78,7 +78,7 @@ I study this agenda through a systems view of optimization: an algorithm is a di
 </li>
 </ul>
 
-## Game theory and distributed decision-making
+# Game theory and distributed decision-making
 
 In a network of autonomous agents, the outcome of a decision depends on what others do. Vehicles share road space-time, charging users share electrical capacity, and robots may compete for tasks or resources. Each agent can have its own cost and limited information, while shared constraints couple their feasible choices. Game theory provides a language for modelling these interactions and studying equilibria: decisions at which no agent benefits from a feasible unilateral change.
 
