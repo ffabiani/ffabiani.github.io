@@ -6,20 +6,18 @@
   padding-right: 0;
 }
 .teaching-page .page__title,
-.teaching-page .page__content h1 {
+.teaching-page .page__content h2,
+.teaching-page .page__content h3,
+.teaching-page .page__content h4 {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.35;
 }
 .teaching-page .page__content h2 {
-  font-size: 18px;
-  font-weight: 600;
   margin-top: 1.7em;
   margin-bottom: 0.8em;
 }
 .teaching-page .page__content h3 {
-  font-size: 18px;
-  font-weight: 600;
   margin-top: 1.2em;
   margin-bottom: 0.5em;
 }
