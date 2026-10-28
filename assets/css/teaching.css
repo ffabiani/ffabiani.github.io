@@ -1,0 +1,52 @@
+/* Match the site's typography and inherit its active light/dark colours. */
+.teaching-page .page {
+  float: none;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+.teaching-page .page__title,
+.teaching-page .page__content h2,
+.teaching-page .page__content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.teaching-page .page__content h2 {
+  margin-top: 1.7em;
+  margin-bottom: 0.8em;
+}
+.teaching-page .page__content h3 {
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+}
+.teaching-page .teaching-details {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  column-gap: 1.5em;
+  row-gap: 0.35em;
+  margin: 1em 0 1.2em;
+  line-height: 1.6;
+  text-align: left;
+}
+.teaching-page .teaching-details dt {
+  margin: 0;
+  font-weight: 600;
+}
+.teaching-page .teaching-details dd {
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.teaching-page .page__content a {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 480px) {
+  .teaching-page .teaching-details {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 0.1em;
+  }
+  .teaching-page .teaching-details dd {
+    margin-bottom: 0.6em;
+  }
+}
