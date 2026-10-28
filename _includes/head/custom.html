@@ -23,3 +23,28 @@
   document.title = {{ page.browser_title | jsonify }};
 </script>
 {% endif %}
+
+<!-- Shared heading rules, applied after both theme stylesheets. -->
+<style id="section-heading-rules">
+  .page .page__content h1 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.35em;
+    border-bottom: 1px solid currentColor;
+  }
+
+  {% if page.title and page.title != "" %}
+  .page h1.page__title {
+    padding-bottom: 0.35em;
+    border-bottom: 1px solid currentColor;
+  }
+  {% endif %}
+
+  .page .page__content h2,
+  .page .page__content h3,
+  .page .page__content h4,
+  .page .page__content h5,
+  .page .page__content h6 {
+    border-bottom: 0;
+  }
+</style>
