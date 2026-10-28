@@ -15,8 +15,8 @@ I am privileged and fortunate enough to work with really smart people.
       class="team-photo"
       src="{{ student.photo | relative_url }}"
       alt="Portrait of {{ student.name | escape }}"
-      width="140"
-      height="140"
+      width="100"
+      height="100"
       loading="lazy">
     <div class="team-details">
         <h3>
