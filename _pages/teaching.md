@@ -8,15 +8,15 @@ classes: wide no-sidebar teaching-page
 
 <link rel="stylesheet" href="{{ '/assets/css/teaching.css' | relative_url }}">
 
-# PhD teaching
+<h1>PhD teaching</h1>
 
-## Algorithmic Game Theory (IMT Lucca)
+<h2>Algorithmic Game Theory (IMT Lucca)</h2>
 
 This PhD course is planned for **September 2027**. Further information about the course content, schedule and teaching materials will be available soon.
 
-# MSc teaching
+<h1>MSc teaching</h1>
 
-## Optimization and Machine Learning for Dynamical Systems (University of Florence)
+<h2>Optimization and Machine Learning for Dynamical Systems (University of Florence)</h2>
 
 This course aims at introducing classical problems in systems-and-control theory, such as the analysis of dynamical systems and the associated controller synthesis, estimation and state reconstruction problems. Starting from classical mathematical methods, including those based on optimization, the course then explores how data and machine learning can be used to address these problems, discussing the strengths and limitations of each approach. Frontal lectures are complemented by hands-on sessions involving programming in MATLAB, Python, or Julia.
 
