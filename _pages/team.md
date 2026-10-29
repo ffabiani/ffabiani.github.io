@@ -11,13 +11,21 @@ I am privileged and fortunate enough to work with really smart people.
 <ul class="team-list">
 {% for student in site.data.students %}
   <li class="team-member">
-    <img
+  <img
+    class="team-photo"
+    src="{{ student.photo | relative_url }}"
+    alt="Portrait of {{ student.name | escape }}"
+    width="100"
+    height="100"
+    style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;"
+    loading="lazy">
+    <!-- <img
       class="team-photo"
       src="{{ student.photo | relative_url }}"
       alt="Portrait of {{ student.name | escape }}"
       width="100"
       height="100"
-      loading="lazy">
+      loading="lazy"> -->
     <div class="team-details">
         <h3>
             {% if student.url and student.url != "" %}
