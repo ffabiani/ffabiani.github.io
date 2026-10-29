@@ -53,3 +53,35 @@
   updateButton();
 })();
 </script>
+
+<span class="page__footer-counter" id="site-visitor-counter"
+      aria-live="polite" aria-atomic="true" title="Total site visits, provided by GoatCounter">
+  Visitors: <span id="site-visitor-count">—</span>
+</span>
+
+<script data-goatcounter="https://ffabiani.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+<script>
+(() => {
+  const counter = document.getElementById("site-visitor-counter");
+  const value = document.getElementById("site-visitor-count");
+  if (!counter || !value) return;
+
+  // TOTAL shows the same site-wide count on every page.
+  fetch("https://ffabiani.goatcounter.com/counter/TOTAL.json")
+    .then((response) => {
+      if (!response.ok) throw new Error("Counter unavailable");
+      return response.json();
+    })
+    .then((data) => {
+      if (data.count === undefined || data.count === null) {
+        throw new Error("Counter unavailable");
+      }
+      value.textContent = String(data.count);
+    })
+    .catch(() => {
+      // Keep the footer usable if the service is unavailable or blocked.
+      counter.title = "Visitor count currently unavailable";
+    });
+})();
+</script>
